@@ -23,15 +23,13 @@ methods:
             Name of List
     response:
       id: 102
-      doc: |
-        The number of elements in this list
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of elements in this list
   - name: contains
     doc: |
       Returns true if this list contains the specified element.
@@ -56,15 +54,13 @@ methods:
             Element whose presence in this list is to be tested
     response:
       id: 101
-      doc: |
-        True if this list contains the specified element, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list contains the specified element, false otherwise
   - name: containsAll
     doc: >
       Returns true if this list contains all of the elements of the specified
@@ -90,16 +86,14 @@ methods:
             Collection to be checked for containment in this list
     response:
       id: 101
-      doc: |
-        True if this list contains all of the elements of the
-        specified collection
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list contains all of the elements of the
+            specified collection
   - name: add
     doc: >
       Appends the specified element to the end of this list (optional
@@ -131,15 +125,13 @@ methods:
             Element to be appended to this list
     response:
       id: 101
-      doc: |
-        true if this list changed as a result of the call, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if this list changed as a result of the call, false otherwise
   - name: remove
     doc: >
       Removes the first occurrence of the specified element from this list, if
@@ -169,15 +161,13 @@ methods:
             Element to be removed from this list, if present
     response:
       id: 101
-      doc: |
-        True if this list contained the specified element, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list contained the specified element, false otherwise
   - name: addAll
     doc: >
       Appends all of the elements in the specified collection to the end of this
@@ -209,15 +199,13 @@ methods:
             Collection containing elements to be added to this list
     response:
       id: 101
-      doc: |
-        True if this list changed as a result of the call, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list changed as a result of the call, false otherwise
   - name: compareAndRemoveAll
     doc: >
       Removes from this list all of its elements that are contained in the
@@ -243,15 +231,13 @@ methods:
             The list of values to compare for removal.
     response:
       id: 101
-      doc: |
-        True if removed at least one of the items, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if removed at least one of the items, false otherwise.
   - name: compareAndRetainAll
     doc: >
       Retains only the elements in this list that are contained in the specified
@@ -279,15 +265,13 @@ methods:
             The list of values to compare for retaining.
     response:
       id: 101
-      doc: |
-        True if this list changed as a result of the call, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list changed as a result of the call, false otherwise.
   - name: clear
     doc: >
       Removes all of the elements from this list (optional operation). The list
@@ -327,15 +311,13 @@ methods:
             Name of the List
     response:
       id: 106
-      doc: |
-        An array of all item values in the list.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            An array of all item values in the list.
   - name: addListener
     doc: >
       Adds an item listener for this collection. Listener will be notified for
@@ -368,15 +350,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        Registration id for the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Registration id for the listener.
     events:
       - id: 204
         name: Item
@@ -424,15 +404,13 @@ methods:
             The id of the listener which was provided during registration.
     response:
       id: 101
-      doc: |
-        True if unregistered, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if unregistered, false otherwise.
   - name: isEmpty
     doc: |
       Returns true if this list contains no elements
@@ -451,15 +429,13 @@ methods:
             Name of the List
     response:
       id: 101
-      doc: |
-        True if this list contains no elements
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list contains no elements
   - name: addAllWithIndex
     doc: >
       Inserts all of the elements in the specified collection into this list at
@@ -500,15 +476,13 @@ methods:
             The list of value to insert into the list.
     response:
       id: 101
-      doc: |
-        True if this list changed as a result of the call, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this list changed as a result of the call, false otherwise.
   - name: get
     doc: |
       Returns the element at the specified position in this list
@@ -533,15 +507,13 @@ methods:
             Index of the element to return
     response:
       id: 105
-      doc: |
-        The element at the specified position in this list
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The element at the specified position in this list
   - name: set
     doc: |
       The element previously at the specified position
@@ -572,15 +544,13 @@ methods:
             Element to be stored at the specified position
     response:
       id: 105
-      doc: |
-        The element previously at the specified position
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The element previously at the specified position
   - name: addWithIndex
     doc: >
       Inserts the specified element at the specified position in this list
@@ -643,15 +613,13 @@ methods:
             The index of the element to be removed
     response:
       id: 105
-      doc: |
-        The element previously at the specified position
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The element previously at the specified position
   - name: lastIndexOf
     doc: >
       Returns the index of the last occurrence of the specified element in this
@@ -679,16 +647,14 @@ methods:
             Element to search for
     response:
       id: 102
-      doc: |
-        the index of the last occurrence of the specified element in
-        this list, or -1 if this list does not contain the element
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the index of the last occurrence of the specified element in
+            this list, or -1 if this list does not contain the element
   - name: indexOf
     doc: >
       Returns the index of the first occurrence of the specified element in this
@@ -716,16 +682,14 @@ methods:
             Element to search for
     response:
       id: 102
-      doc: |
-        The index of the first occurrence of the specified element in
-        this list, or -1 if this list does not contain the element
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The index of the first occurrence of the specified element in
+            this list, or -1 if this list does not contain the element
   - name: sub
     doc: >
       Returns a view of the portion of this list between the specified from,
@@ -777,15 +741,13 @@ methods:
             High endpoint (exclusive) of the subList
     response:
       id: 106
-      doc: |
-        A view of the specified range within this list
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A view of the specified range within this list
   - name: iterator
     doc: |
       Returns an iterator over the elements in this list in proper sequence.
@@ -804,15 +766,13 @@ methods:
             Name of the List
     response:
       id: 106
-      doc: |
-        An iterator over the elements in this list in proper sequence
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            An iterator over the elements in this list in proper sequence
   - name: listIterator
     doc: >
       Returns a list iterator over the elements in this list (in proper
@@ -844,13 +804,11 @@ methods:
             index of the first element to be returned from the list iterator next
     response:
       id: 106
-      doc: |
-        a list iterator over the elements in this list (in proper
-        sequence), starting at the specified position in the list
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            a list iterator over the elements in this list (in proper
+            sequence), starting at the specified position in the list

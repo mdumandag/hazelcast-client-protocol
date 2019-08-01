@@ -49,16 +49,14 @@ methods:
             How long to wait before giving up, in milliseconds
     response:
       id: 101
-      doc: >
-        <tt>true</tt> if successful, or <tt>false</tt> if the specified waiting
-        time elapses before space is available
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            <tt>true</tt> if successful, or <tt>false</tt> if the specified
+            waiting time elapses before space is available
   - name: take
     doc: >
       Retrieves and removes the head of this queue, waiting if necessary until
@@ -92,15 +90,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 105
-      doc: |
-        The head of this queue
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The head of this queue
   - name: poll
     doc: >
       Retrieves and removes the head of this queue, waiting up to the specified
@@ -142,16 +138,14 @@ methods:
             How long to wait before giving up, in milliseconds
     response:
       id: 105
-      doc: >
-        The head of this queue, or <tt>null</tt> if the specified waiting time
-        elapses before an element is available
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The head of this queue, or <tt>null</tt> if the specified waiting
+            time elapses before an element is available
   - name: peek
     doc: >
       Retrieves, but does not remove, the head of this queue, or returns null if
@@ -191,15 +185,13 @@ methods:
             How long to wait before giving up, in milliseconds
     response:
       id: 105
-      doc: |
-        The value at the head of the queue.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The value at the head of the queue.
   - name: size
     doc: >
       Returns the number of elements in this collection.If this collection
@@ -235,12 +227,10 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 102
-      doc: |
-        The number of elements in this collection
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of elements in this collection

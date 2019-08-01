@@ -36,15 +36,14 @@ methods:
             key.
     response:
       id: 101
-      doc: >
-        <tt>True</tt> if the element was added to this queue, else <tt>false</tt>
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            <tt>True</tt> if the element was added to this queue, else
+            <tt>false</tt>
   - name: put
     doc: >
       Inserts the specified element into this queue, waiting if necessary for
@@ -93,15 +92,13 @@ methods:
             Name of the Queue
     response:
       id: 102
-      doc: |
-        The number of elements in this collection
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of elements in this collection
   - name: remove
     doc: >
       Retrieves and removes the head of this queue.  This method differs from
@@ -129,15 +126,13 @@ methods:
             Element to be removed from this queue, if present
     response:
       id: 101
-      doc: |
-        <tt>true</tt> if this queue changed as a result of the call
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>true</tt> if this queue changed as a result of the call
   - name: poll
     doc: >
       Retrieves and removes the head of this queue, waiting up to the specified
@@ -166,15 +161,13 @@ methods:
             key.
     response:
       id: 105
-      doc: |
-        The head of this queue, or <tt>null</tt> if this queue is empty
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The head of this queue, or <tt>null</tt> if this queue is empty
   - name: take
     doc: >
       Retrieves and removes the head of this queue, waiting if necessary until
@@ -194,15 +187,13 @@ methods:
             Name of the Queue
     response:
       id: 105
-      doc: |
-        The head of this queue
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The head of this queue
   - name: peek
     doc: >
       Retrieves, but does not remove, the head of this queue, or returns null if
@@ -222,15 +213,13 @@ methods:
             Name of the Queue
     response:
       id: 105
-      doc: |
-        The head of this queue, or <tt>null</tt> if this queue is empty
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The head of this queue, or <tt>null</tt> if this queue is empty
   - name: iterator
     doc: >
       Returns an iterator over the elements in this collection.  There are no
@@ -252,15 +241,13 @@ methods:
             Name of the Queue
     response:
       id: 106
-      doc: |
-        list of all data in queue
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            list of all data in queue
   - name: drainTo
     doc: >
       Removes all available elements from this queue and adds them to the given
@@ -288,15 +275,13 @@ methods:
             Name of the Queue
     response:
       id: 106
-      doc: |
-        list of all removed data in queue
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            list of all removed data in queue
   - name: drainToMaxSize
     doc: >
       Removes at most the given number of available elements from this queue and
@@ -330,15 +315,13 @@ methods:
             The maximum number of elements to transfer
     response:
       id: 106
-      doc: |
-        list of all removed data in result of this method
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            list of all removed data in result of this method
   - name: contains
     doc: >
       Returns true if this queue contains the specified element. More formally,
@@ -366,15 +349,13 @@ methods:
             Element whose presence in this collection is to be tested
     response:
       id: 101
-      doc: |
-        <tt>true</tt> if this collection contains the specified element
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>true</tt> if this collection contains the specified element
   - name: containsAll
     doc: >
       Return true if this collection contains all of the elements in the
@@ -400,16 +381,14 @@ methods:
             Collection to be checked for containment in this collection
     response:
       id: 101
-      doc: >
-        <tt>true</tt> if this collection contains all of the elements in the
-        specified collection
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            <tt>true</tt> if this collection contains all of the elements in the
+            specified collection
   - name: compareAndRemoveAll
     doc: >
       Removes all of this collection's elements that are also contained in the
@@ -437,15 +416,13 @@ methods:
             Collection containing elements to be removed from this collection
     response:
       id: 101
-      doc: |
-        <tt>true</tt> if this collection changed as a result of the call
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>true</tt> if this collection changed as a result of the call
   - name: compareAndRetainAll
     doc: >
       Retains only the elements in this collection that are contained in the
@@ -473,15 +450,13 @@ methods:
             collection containing elements to be retained in this collection
     response:
       id: 101
-      doc: |
-        <tt>true</tt> if this collection changed as a result of the call
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>true</tt> if this collection changed as a result of the call
   - name: clear
     doc: >
       Removes all of the elements from this collection (optional operation). The
@@ -536,15 +511,13 @@ methods:
             Collection containing elements to be added to this collection
     response:
       id: 101
-      doc: |
-        <tt>true</tt> if this collection changed as a result of the call
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>true</tt> if this collection changed as a result of the call
   - name: addListener
     doc: >
       Adds an listener for this collection. Listener will be notified or all
@@ -578,15 +551,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        The registration id
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The registration id
     events:
       - id: 204
         name: Item
@@ -634,15 +605,13 @@ methods:
             Id of the listener registration.
     response:
       id: 101
-      doc: |
-        True if the item listener is removed, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the item listener is removed, false otherwise
   - name: remainingCapacity
     doc: >
       Returns the number of additional elements that this queue can ideally (in
@@ -668,15 +637,13 @@ methods:
             Name of the Queue
     response:
       id: 102
-      doc: |
-        The remaining capacity
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The remaining capacity
   - name: isEmpty
     doc: |
       Returns true if this collection contains no elements.
@@ -695,12 +662,10 @@ methods:
             Name of the Queue
     response:
       id: 101
-      doc: |
-        <tt>True</tt> if this collection contains no elements
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>True</tt> if this collection contains no elements

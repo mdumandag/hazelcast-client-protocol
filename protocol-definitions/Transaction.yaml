@@ -76,15 +76,13 @@ methods:
             The thread id for the transaction.
     response:
       id: 104
-      doc: |
-        The transaction id for the created transaction.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The transaction id for the created transaction.
   - name: rollback
     doc: |
       TODO DOC

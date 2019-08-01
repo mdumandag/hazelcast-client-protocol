@@ -23,15 +23,13 @@ methods:
             Name of the Ringbuffer
     response:
       id: 103
-      doc: |
-        the size
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the size
   - name: tailSequence
     doc: >
       Returns the sequence of the tail. The tail is the side of the ringbuffer
@@ -53,15 +51,13 @@ methods:
             Name of the Ringbuffer
     response:
       id: 103
-      doc: |
-        the sequence of the tail
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the sequence of the tail
   - name: headSequence
     doc: >
       Returns the sequence of the head. The head is the side of the ringbuffer
@@ -85,15 +81,13 @@ methods:
             Name of the Ringbuffer
     response:
       id: 103
-      doc: |
-        the sequence of the head
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the sequence of the head
   - name: capacity
     doc: |
       Returns the capacity of this Ringbuffer.
@@ -112,15 +106,13 @@ methods:
             Name of the Ringbuffer
     response:
       id: 103
-      doc: |
-        the capacity
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the capacity
   - name: remainingCapacity
     doc: >
       Returns the remaining capacity of the ringbuffer. The returned value could
@@ -142,15 +134,13 @@ methods:
             Name of the Ringbuffer
     response:
       id: 103
-      doc: |
-        the remaining capacity
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the remaining capacity
   - name: add
     doc: >
       Adds an item to the tail of the Ringbuffer. If there is space in the
@@ -202,15 +192,13 @@ methods:
             to item to add
     response:
       id: 103
-      doc: |
-        the sequence of the added item, or -1 if the add failed.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the sequence of the added item, or -1 if the add failed.
   - name: readOne
     doc: >
       Reads one item from the Ringbuffer. If the sequence is one beyond the
@@ -242,15 +230,13 @@ methods:
             the sequence of the item to read.
     response:
       id: 105
-      doc: |
-        the read item
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the read item
   - name: addAll
     doc: >
       Adds all the items of a collection to the tail of the Ringbuffer. A addAll
@@ -296,15 +282,13 @@ methods:
             the overflowPolicy to use
     response:
       id: 103
-      doc: |
-        the ICompletableFuture to synchronize on completion.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the ICompletableFuture to synchronize on completion.
   - name: readMany
     doc: >
       Reads a batch of items from the Ringbuffer. If the number of available

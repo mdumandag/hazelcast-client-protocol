@@ -34,15 +34,13 @@ methods:
       since: 2
     response:
       id: 133
-      doc: |
-        Array of Xids.
       params:
         - name: response
           type: List_Xid
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Array of Xids.
   - name: finalize
     doc: |
       TODO DOC
@@ -123,15 +121,13 @@ methods:
             rollback.
     response:
       id: 104
-      doc: |
-        The transaction unique identifier.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The transaction unique identifier.
   - name: prepare
     doc: |
       TODO DOC

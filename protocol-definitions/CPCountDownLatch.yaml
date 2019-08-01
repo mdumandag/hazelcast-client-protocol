@@ -35,16 +35,14 @@ methods:
             threads can pass through await
     response:
       id: 101
-      doc: |
-        true if the new count was set,
-        false if the current count is not zero.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the new count was set,
+            false if the current count is not zero.
   - name: await
     doc: |
       Causes the current thread to wait until the latch has counted down
@@ -96,16 +94,14 @@ methods:
             The maximum time in milliseconds to wait
     response:
       id: 101
-      doc: |
-        true if the count reached zero, false if
-        the waiting time elapsed before the count reached 0
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the count reached zero, false if
+            the waiting time elapsed before the count reached 0
   - name: countDown
     doc: |
       Decrements the count of the latch, releasing all waiting threads if
@@ -172,15 +168,13 @@ methods:
             Name of the CountDownLatch instance
     response:
       id: 102
-      doc: |
-        The current count of this CountDownLatch instance
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The current count of this CountDownLatch instance
   - name: getRound
     doc: |
       Returns the current round. A round completes when the count value
@@ -206,12 +200,10 @@ methods:
             Name of the CountDownLatch instance
     response:
       id: 102
-      doc: |
-        The current round of this CountDownLatch instance
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The current round of this CountDownLatch instance

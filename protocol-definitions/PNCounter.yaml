@@ -154,12 +154,10 @@ methods:
             the name of the PNCounter
     response:
       id: 102
-      doc: |
-        the configured replica count
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the configured replica count

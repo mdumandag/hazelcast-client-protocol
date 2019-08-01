@@ -26,15 +26,13 @@ methods:
             the function applied on the value, the stored value does not change
     response:
       id: 105
-      doc: |
-        the result of the function application
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the result of the function application
   - name: alter
     doc: |
       Alters the currently stored reference by applying a function on it.
@@ -86,15 +84,13 @@ methods:
             the function that alters the currently stored reference
     response:
       id: 105
-      doc: |
-        the new value, the result of the applied function.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the new value, the result of the applied function.
   - name: getAndAlter
     doc: >
       Alters the currently stored reference by applying a function on it on and
@@ -120,15 +116,13 @@ methods:
             the function that alters the currently stored reference
     response:
       id: 105
-      doc: |
-        the old value, the value before the function is applied
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the old value, the value before the function is applied
   - name: contains
     doc: |
       Checks if the reference contains the value.
@@ -153,15 +147,13 @@ methods:
             the value to check (is allowed to be null).
     response:
       id: 101
-      doc: |
-        true if the value is found, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the value is found, false otherwise.
   - name: compareAndSet
     doc: >
       Atomically sets the value to the given updated value only if the current
@@ -193,16 +185,14 @@ methods:
             the new value
     response:
       id: 101
-      doc: |
-        true if successful; or false if the actual value
-        was not equal to the expected value.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if successful; or false if the actual value
+            was not equal to the expected value.
   - name: get
     doc: |
       Gets the current value.
@@ -221,15 +211,13 @@ methods:
             Name of the AtomicReference distributed object instance.
     response:
       id: 105
-      doc: |
-        the current value
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the current value
   - name: set
     doc: |
       Atomically sets the given value.
@@ -300,15 +288,13 @@ methods:
             the new value.
     response:
       id: 105
-      doc: |
-        the old value.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the old value.
   - name: setAndGet
     doc: |
       Sets and gets the value.
@@ -333,15 +319,13 @@ methods:
             the new value
     response:
       id: 105
-      doc: |
-        the new value
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the new value
   - name: isNull
     doc: |
       Checks if the stored reference is null.
@@ -360,12 +344,10 @@ methods:
             Name of the AtomicReference distributed object instance.
     response:
       id: 101
-      doc: |
-        true if null, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if null, false otherwise.

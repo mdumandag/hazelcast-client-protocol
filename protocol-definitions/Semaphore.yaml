@@ -26,15 +26,13 @@ methods:
             The given permit count
     response:
       id: 101
-      doc: |
-        True if initialization succeeds, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if initialization succeeds, false otherwise.
   - name: acquire
     doc: >
       Acquires the given number of permits if they are available, and returns
@@ -95,15 +93,13 @@ methods:
             Name of the Semaphore
     response:
       id: 102
-      doc: |
-        The number of permits available in this semaphore.
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of permits available in this semaphore.
   - name: drainPermits
     doc: |
       Acquires and returns all permits that are immediately available.
@@ -122,15 +118,13 @@ methods:
             Name of the Semaphore
     response:
       id: 102
-      doc: |
-        The number of permits drained
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of permits drained
   - name: reducePermits
     doc: >
       Shrinks the number of available permits by the indicated reduction. This
@@ -226,16 +220,14 @@ methods:
             The maximum time to wait for a permit
     response:
       id: 101
-      doc: >
-        true if all permits were acquired,  false if the waiting time elapsed
-        before all permits could be acquired
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            true if all permits were acquired,  false if the waiting time
+            elapsed before all permits could be acquired
   - name: increasePermits
     doc: >
       Increases the number of available permits by the indicated amount. This

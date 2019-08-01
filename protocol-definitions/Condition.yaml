@@ -48,16 +48,14 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 101
-      doc: >
-        False if the waiting time detectably elapsed before return from the
-        method, else true
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            False if the waiting time detectably elapsed before return from the
+            method, else true
   - name: beforeAwait
     doc: >
       Causes the current thread to wait until it is signalled or

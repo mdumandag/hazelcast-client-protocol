@@ -51,12 +51,10 @@ methods:
             The name of CardinalityEstimator
     response:
       id: 103
-      doc: |
-        the previous cached estimation or the newly computed one.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the previous cached estimation or the newly computed one.

@@ -43,15 +43,13 @@ methods:
             Name of the executor.
     response:
       id: 101
-      doc: |
-        true if this executor has been shut down
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if this executor has been shut down
   - name: cancelOnPartition
     doc: |
       TODO DOC
@@ -77,15 +75,13 @@ methods:
             thread, otherwise interrupt can not be used.
     response:
       id: 101
-      doc: |
-        True if cancelled successfully, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if cancelled successfully, false otherwise.
   - name: cancelOnAddress
     doc: |
       TODO DOC
@@ -117,15 +113,13 @@ methods:
             thread, otherwise interrupt can not be used.
     response:
       id: 101
-      doc: |
-        True if cancelled successfully, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if cancelled successfully, false otherwise.
   - name: submitToPartition
     doc: |
       TODO DOC
@@ -162,15 +156,13 @@ methods:
             The id of the partition which the callable shall be executed on.
     response:
       id: 105
-      doc: |
-        The result of the callable execution.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The result of the callable execution.
   - name: submitToAddress
     doc: |
       TODO DOC
@@ -207,12 +199,10 @@ methods:
             The member host on which the callable shall be executed on.
     response:
       id: 105
-      doc: |
-        The result of the callable execution.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The result of the callable execution.

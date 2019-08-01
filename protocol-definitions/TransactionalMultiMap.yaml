@@ -46,16 +46,14 @@ methods:
             The value to be stored
     response:
       id: 101
-      doc: >
-        True if the size of the multimap is increased, false if the multimap
-        already contains the key-value pair.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            True if the size of the multimap is increased, false if the multimap
+            already contains the key-value pair.
   - name: get
     doc: |
       Returns the collection of values associated with the key.
@@ -94,15 +92,13 @@ methods:
             The key whose associated values are returned
     response:
       id: 106
-      doc: |
-        The collection of the values associated with the key
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The collection of the values associated with the key
   - name: remove
     doc: |
       Removes the given key value pair from the multimap.
@@ -141,16 +137,14 @@ methods:
             The key whose associated values are returned
     response:
       id: 106
-      doc: >
-        True if the size of the multimap changed after the remove operation,
-        false otherwise.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            True if the size of the multimap changed after the remove operation,
+            false otherwise.
   - name: removeEntry
     doc: |
       Removes all the entries associated with the given key.
@@ -195,16 +189,14 @@ methods:
             The value to be stored
     response:
       id: 101
-      doc: >
-        True if the size of the multimap changed after the remove operation,
-        false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            True if the size of the multimap changed after the remove operation,
+            false otherwise.
   - name: valueCount
     doc: |
       Returns the number of values matching the given key in the multimap.
@@ -243,15 +235,13 @@ methods:
             The key whose number of values are returned
     response:
       id: 102
-      doc: |
-        The number of values matching the given key in the multimap
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of values matching the given key in the multimap
   - name: size
     doc: |
       Returns the number of key-value pairs in the multimap.
@@ -284,12 +274,10 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 102
-      doc: |
-        The number of key-value pairs in the multimap
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of key-value pairs in the multimap

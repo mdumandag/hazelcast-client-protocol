@@ -33,15 +33,13 @@ methods:
             Number of permits to initialize this ISemaphore
     response:
       id: 101
-      doc: |
-        true if the ISemaphore is initialized with this call
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the ISemaphore is initialized with this call
   - name: acquire
     doc: |
       Acquires the requested amount of permits if available, reducing
@@ -99,16 +97,14 @@ methods:
             Duration to wait for permit acquire
     response:
       id: 101
-      doc: |
-        true if requested permits are acquired,
-        false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if requested permits are acquired,
+            false otherwise
   - name: release
     doc: |
       Releases the given number of permits and increases the number of
@@ -158,15 +154,13 @@ methods:
             number of permits to release
     response:
       id: 101
-      doc: |
-        true
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true
   - name: drain
     doc: |
       Acquires all available permits at once and returns immediately.
@@ -209,15 +203,13 @@ methods:
             UID of this invocation
     response:
       id: 102
-      doc: |
-        number of acquired permits
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            number of acquired permits
   - name: change
     doc: |
       Increases or decreases the number of permits by the given value.
@@ -266,15 +258,13 @@ methods:
             number of permits to increase / decrease
     response:
       id: 101
-      doc: |
-        true
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true
   - name: availablePermits
     doc: |
       Returns the number of available permits.
@@ -299,15 +289,13 @@ methods:
             Name of this ISemaphore instance
     response:
       id: 102
-      doc: |
-        number of available permits
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            number of available permits
   - name: getSemaphoreType
     doc: |
       Returns true if the semaphore is JDK compatible
@@ -326,12 +314,10 @@ methods:
             Name of the ISemaphore proxy
     response:
       id: 101
-      doc: |
-        true if the semaphore is JDK compatible
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the semaphore is JDK compatible

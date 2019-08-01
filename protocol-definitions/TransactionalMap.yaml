@@ -40,15 +40,13 @@ methods:
             The specified key.
     response:
       id: 101
-      doc: |
-        True if this map contains an entry for the specified key.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this map contains an entry for the specified key.
   - name: get
     doc: >
       Returns the value for the specified key, or null if this map does not
@@ -88,15 +86,13 @@ methods:
             The specified key
     response:
       id: 105
-      doc: |
-        The value for the specified key
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The value for the specified key
   - name: getForUpdate
     doc: >
       Locks the key and then gets and returns the value to which the specified
@@ -138,15 +134,13 @@ methods:
             The value to which the specified key is mapped
     response:
       id: 105
-      doc: |
-        The value for the specified key
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The value for the specified key
   - name: size
     doc: |
       Returns the number of entries in this map.
@@ -179,15 +173,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 102
-      doc: |
-        The number of entries in this map.
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of entries in this map.
   - name: isEmpty
     doc: |
       Returns true if this map contains no entries.
@@ -220,15 +212,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 101
-      doc: |
-        <tt>true</tt> if this map contains no entries.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            <tt>true</tt> if this map contains no entries.
   - name: put
     doc: >
       Associates the specified value with the specified key in this map. If the
@@ -285,16 +275,14 @@ methods:
             deleted. O means infinite.
     response:
       id: 105
-      doc: >
-        Previous value associated with key or  null if there was no mapping for
-        key
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            Previous value associated with key or  null if there was no mapping
+            for key
   - name: set
     doc: >
       Associates the specified value with the specified key in this map. If the
@@ -395,16 +383,14 @@ methods:
             The value to associate with the key when there is no previous value.
     response:
       id: 105
-      doc: >
-        The previous value associated with key, or null if there was no mapping
-        for key.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The previous value associated with key, or null if there was no
+            mapping for key.
   - name: replace
     doc: >
       Replaces the entry for a key only if it is currently mapped to some value.
@@ -452,16 +438,14 @@ methods:
             The value replaced the previous value
     response:
       id: 105
-      doc: >
-        The previous value associated with key, or null if there was no mapping
-        for key.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The previous value associated with key, or null if there was no
+            mapping for key.
   - name: replaceIfSame
     doc: >
       Replaces the entry for a key only if currently mapped to a given value.
@@ -515,15 +499,13 @@ methods:
             The new value to replace the old value.
     response:
       id: 101
-      doc: |
-        true if the value was replaced.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the value was replaced.
   - name: remove
     doc: >
       Removes the mapping for a key from this map if it is present. The map will
@@ -567,16 +549,14 @@ methods:
             Remove the mapping for this key.
     response:
       id: 105
-      doc: >
-        The previous value associated with key, or null if there was no mapping
-        for key
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The previous value associated with key, or null if there was no
+            mapping for key
   - name: delete
     doc: >
       Removes the mapping for a key from this map if it is present. The map will
@@ -669,15 +649,13 @@ methods:
             Remove the key if it has this value.
     response:
       id: 101
-      doc: |
-        True if the value was removed
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the value was removed
   - name: keySet
     doc: >
       Returns a set clone of the keys contained in this map. The set is NOT
@@ -715,15 +693,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 106
-      doc: |
-        A set clone of the keys contained in this map.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A set clone of the keys contained in this map.
   - name: keySetWithPredicate
     doc: >
       Queries the map based on the specified predicate and returns the keys of
@@ -769,15 +745,13 @@ methods:
             Specified query criteria.
     response:
       id: 106
-      doc: |
-        Result key set for the query.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Result key set for the query.
   - name: values
     doc: >
       Returns a collection clone of the values contained in this map. The
@@ -815,15 +789,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 106
-      doc: |
-        All values in the map
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            All values in the map
   - name: valuesWithPredicate
     doc: >
       Queries the map based on the specified predicate and returns the values of
@@ -869,15 +841,13 @@ methods:
             Specified query criteria.
     response:
       id: 106
-      doc: |
-        Result value collection of the query.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Result value collection of the query.
   - name: containsValue
     doc: |
       Returns true if this map contains an entry for the specified value.
@@ -916,12 +886,10 @@ methods:
             The specified value.
     response:
       id: 101
-      doc: |
-        True if this map contains an entry for the specified key.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this map contains an entry for the specified key.

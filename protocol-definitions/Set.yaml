@@ -23,15 +23,13 @@ methods:
             Name of the Set
     response:
       id: 102
-      doc: |
-        The number of elements in this set (its cardinality)
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of elements in this set (its cardinality)
   - name: contains
     doc: |
       Returns true if this set contains the specified element.
@@ -56,15 +54,13 @@ methods:
             Element whose presence in this set is to be tested
     response:
       id: 101
-      doc: |
-        True if this set contains the specified element, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this set contains the specified element, false otherwise
   - name: containsAll
     doc: >
       Returns true if this set contains all of the elements of the specified
@@ -92,16 +88,14 @@ methods:
             Collection to be checked for containment in this list
     response:
       id: 101
-      doc: |
-        true if this set contains all of the elements of the
-        specified collection
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if this set contains all of the elements of the
+            specified collection
   - name: add
     doc: >
       Adds the specified element to this set if it is not already present
@@ -137,16 +131,14 @@ methods:
             Element to be added to this set
     response:
       id: 101
-      doc: |
-        True if this set did not already contain the specified
-        element and the element is added, returns false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this set did not already contain the specified
+            element and the element is added, returns false otherwise.
   - name: remove
     doc: >
       Removes the specified element from this set if it is present (optional
@@ -176,16 +168,14 @@ methods:
             Object to be removed from this set, if present
     response:
       id: 101
-      doc: >
-        True if this set contained the specified element and it is removed
-        successfully
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            True if this set contained the specified element and it is removed
+            successfully
   - name: addAll
     doc: >
       Adds all of the elements in the specified collection to this set if
@@ -217,15 +207,13 @@ methods:
             Collection containing elements to be added to this set
     response:
       id: 101
-      doc: |
-        True if this set changed as a result of the call
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this set changed as a result of the call
   - name: compareAndRemoveAll
     doc: >
       Removes from this set all of its elements that are contained in the
@@ -255,15 +243,14 @@ methods:
             The list of values to test for matching the item to remove.
     response:
       id: 101
-      doc: >
-        true if at least one item in values existed and removed, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            true if at least one item in values existed and removed, false
+            otherwise.
   - name: compareAndRetainAll
     doc: >
       Retains only the elements in this set that are contained in the specified
@@ -295,18 +282,16 @@ methods:
             The list of values to test for matching the item to retain.
     response:
       id: 101
-      doc: >
-        true if at least one item in values existed and it is retained, false
-        otherwise. All items not in valueSet but
-
-        in the Set are removed.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            true if at least one item in values existed and it is retained,
+            false otherwise. All items not in valueSet but
+
+            in the Set are removed.
   - name: clear
     doc: >
       Removes all of the elements from this set (optional operation). The set
@@ -346,15 +331,13 @@ methods:
             Name of the Set
     response:
       id: 106
-      doc: |
-        Array of all values in the Set
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Array of all values in the Set
   - name: addListener
     doc: >
       Adds an item listener for this collection. Listener will be notified for
@@ -387,15 +370,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        The registration id.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The registration id.
     events:
       - id: 204
         name: Item
@@ -443,16 +424,14 @@ methods:
             The id retrieved during registration.
     response:
       id: 101
-      doc: >
-        true if the listener with the provided id existed and removed, false
-        otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            true if the listener with the provided id existed and removed, false
+            otherwise.
   - name: isEmpty
     doc: |
       Returns true if this set contains no elements.
@@ -471,12 +450,10 @@ methods:
             Name of the Set
     response:
       id: 101
-      doc: |
-        True if this set contains no elements
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if this set contains no elements

@@ -69,15 +69,13 @@ methods:
             batch, otherwise all changed values are included in the update.
     response:
       id: 117
-      doc: |
-        Array of key-value pairs.
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Array of key-value pairs.
   - name: publisherCreate
     doc: |
       TODO DOC
@@ -145,15 +143,13 @@ methods:
             batch, otherwise all changed values are included in the update.
     response:
       id: 106
-      doc: |
-        Array of keys.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Array of keys.
   - name: madePublishable
     doc: |
       TODO DOC
@@ -178,15 +174,13 @@ methods:
             Name of query cache.
     response:
       id: 101
-      doc: |
-        True if successfully set as publishable, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if successfully set as publishable, false otherwise.
   - name: addListener
     doc: |
       TODO DOC
@@ -212,15 +206,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        Registration id for the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Registration id for the listener.
     events:
       - id: 212
         name: QueryCacheSingle
@@ -292,15 +284,13 @@ methods:
             The cursor position of the accumulator to be set.
     response:
       id: 101
-      doc: |
-        True if the cursor position could be set, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the cursor position could be set, false otherwise.
   - name: destroyCache
     doc: |
       TODO DOC
@@ -325,12 +315,10 @@ methods:
             Name of query cache.
     response:
       id: 101
-      doc: |
-        True if all cache is destroyed, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if all cache is destroyed, false otherwise.

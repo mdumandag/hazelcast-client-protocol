@@ -27,15 +27,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        Registration id for the registered listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Registration id for the registered listener.
     events:
       - id: 210
         name: Cache
@@ -83,15 +81,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        Registration id for the registered listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Registration id for the registered listener.
     events:
       - id: 208
         name: CacheInvalidation
@@ -283,15 +279,13 @@ methods:
             The key whose presence in this cache is to be tested.
     response:
       id: 101
-      doc: |
-        Returns true if cache value for the key exists, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if cache value for the key exists, false otherwise.
   - name: createConfig
     doc: |
       TODO DOC
@@ -320,18 +314,16 @@ methods:
             otherwise.
     response:
       id: 105
-      doc: >
-        The created configuration object. Byte-array which is serialized from an
-        object implementing
-
-        javax.cache.configuration.Configuration interface.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The created configuration object. Byte-array which is serialized
+            from an object implementing
+
+            javax.cache.configuration.Configuration interface.
   - name: destroy
     doc: |
       Closes the cache. Clears the internal content and releases any resource.
@@ -400,16 +392,14 @@ methods:
             the request in the cluster.
     response:
       id: 105
-      doc: >
-        the result of the processing, if any, defined by the EntryProcessor
-        implementation
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            the result of the processing, if any, defined by the EntryProcessor
+            implementation
   - name: getAll
     doc: >
       Gets a collection of entries from the cache with custom expiry policy,
@@ -450,16 +440,14 @@ methods:
             javax.cache.expiry.ExpiryPolicy interface.
     response:
       id: 117
-      doc: |
-        A map of entries that were found for the given keys. Keys not found
-        in the cache are not in the returned map.
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A map of entries that were found for the given keys. Keys not found
+            in the cache are not in the returned map.
   - name: getAndRemove
     doc: >
       Atomically removes the entry for a key only if currently mapped to some
@@ -494,15 +482,13 @@ methods:
             the request in the cluster.
     response:
       id: 105
-      doc: |
-        the value if one existed or null if no mapping existed for this key
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the value if one existed or null if no mapping existed for this key
   - name: getAndReplace
     doc: >
       Atomically replaces the assigned value of the given key by the specified
@@ -558,15 +544,13 @@ methods:
             the request in the cluster.
     response:
       id: 105
-      doc: |
-        The old value previously assigned to the given key.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The old value previously assigned to the given key.
   - name: getConfig
     doc: |
       TODO DOC
@@ -591,18 +575,16 @@ methods:
             Name of the cache without prefix.
     response:
       id: 105
-      doc: >
-        The cache configuration. Byte-array which is serialized from an object
-        implementing
-
-        javax.cache.configuration.Configuration interface.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The cache configuration. Byte-array which is serialized from an
+            object implementing
+
+            javax.cache.configuration.Configuration interface.
   - name: get
     doc: >
       Retrieves the mapped value of the given key using a custom
@@ -641,15 +623,13 @@ methods:
             javax.cache.expiry.ExpiryPolicy interface.
     response:
       id: 105
-      doc: |
-        The value assigned to the given key, or null if not assigned.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The value assigned to the given key, or null if not assigned.
   - name: iterate
     doc: >
       The ordering of iteration over entries is undefined. During iteration, any
@@ -867,15 +847,13 @@ methods:
             the request in the cluster.
     response:
       id: 101
-      doc: |
-        true if a value was set, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if a value was set, false otherwise.
   - name: put
     doc: |
       TODO DOC
@@ -930,15 +908,14 @@ methods:
             the request in the cluster.
     response:
       id: 105
-      doc: |
-        The value previously assigned to the given key, or null if not assigned.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            The value previously assigned to the given key, or null if not
+            assigned.
   - name: removeEntryListener
     doc: |
       TODO DOC
@@ -964,15 +941,13 @@ methods:
             be removed.
     response:
       id: 101
-      doc: |
-        true if the listener is de-registered, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the listener is de-registered, false otherwise
   - name: removeInvalidationListener
     doc: |
       TODO DOC
@@ -998,15 +973,13 @@ methods:
             be removed.
     response:
       id: 101
-      doc: |
-        true if the listener is de-registered, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the listener is de-registered, false otherwise
   - name: remove
     doc: >
       Atomically removes the mapping for a key only if currently mapped to the
@@ -1047,15 +1020,13 @@ methods:
             the request in the cluster.
     response:
       id: 101
-      doc: |
-        returns false if there was no matching key
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            returns false if there was no matching key
   - name: replace
     doc: >
       Atomically replaces the currently assigned value for the given key with
@@ -1118,15 +1089,13 @@ methods:
             the request in the cluster.
     response:
       id: 105
-      doc: |
-        The replaced value.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The replaced value.
   - name: size
     doc: |
       Total entry count
@@ -1145,15 +1114,13 @@ methods:
             Name of the cache.
     response:
       id: 102
-      doc: |
-        total entry count
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            total entry count
   - name: addPartitionLostListener
     doc: >
       Adds a CachePartitionLostListener. The addPartitionLostListener returns a
@@ -1186,15 +1153,13 @@ methods:
             sends all partition lost events.
     response:
       id: 104
-      doc: |
-        returns the registration id for the CachePartitionLostListener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            returns the registration id for the CachePartitionLostListener.
     events:
       - id: 214
         name: CachePartitionLost
@@ -1236,15 +1201,13 @@ methods:
             ID of registered listener.
     response:
       id: 101
-      doc: |
-        true if registration is removed, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if registration is removed, false otherwise.
   - name: putAll
     doc: |
       TODO DOC
@@ -1365,15 +1328,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        Registration id for the registered listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Registration id for the registered listener.
     events:
       - id: 208
         name: CacheInvalidation
@@ -1491,15 +1452,13 @@ methods:
       since: 2
     response:
       id: 123
-      doc: |
-        partitionId to assigned uuid entry list
       params:
         - name: partitionUuidList
           type: Map_Integer_UUID
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            partitionId to assigned uuid entry list
   - name: eventJournalSubscribe
     doc: |
       Performs the initial subscription to the cache event journal.
@@ -1660,12 +1619,10 @@ methods:
             custom expiry policy for this operation
     response:
       id: 101
-      doc: |
-        {
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            {

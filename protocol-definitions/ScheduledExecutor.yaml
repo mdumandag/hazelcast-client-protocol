@@ -158,15 +158,14 @@ methods:
             The name of the scheduler.
     response:
       id: 121
-      doc: |
-        A list of scheduled task handlers used to construct the future proxies.
       params:
         - name: handlers
           type: Map_Member_List_ScheduledTaskHandler
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            A list of scheduled task handlers used to construct the future
+            proxies.
   - name: getStatsFromPartition
     doc: |
       Returns statistics of the task
@@ -312,15 +311,13 @@ methods:
             The name of the task
     response:
       id: 103
-      doc: |
-        The remaining delay of the task formatted in nanoseconds.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The remaining delay of the task formatted in nanoseconds.
   - name: getDelayFromAddress
     doc: >
       Returns the ScheduledFuture's delay in nanoseconds for the task in the
@@ -352,15 +349,13 @@ methods:
             The address of the member where the task will get scheduled.
     response:
       id: 103
-      doc: |
-        The remaining delay of the task formatted in nanoseconds.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The remaining delay of the task formatted in nanoseconds.
   - name: cancelFromPartition
     doc: |
       Cancels further execution and scheduling of the task
@@ -391,15 +386,13 @@ methods:
             A boolean flag to indicate whether the task should be interrupted.
     response:
       id: 101
-      doc: |
-        True if the task was cancelled
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the task was cancelled
   - name: cancelFromAddress
     doc: |
       Cancels further execution and scheduling of the task
@@ -436,15 +429,13 @@ methods:
             A boolean flag to indicate whether the task should be interrupted.
     response:
       id: 101
-      doc: |
-        True if the task was cancelled
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the task was cancelled
   - name: isCancelledFromPartition
     doc: >
       Checks whether a task as identified from the given handler is already
@@ -470,15 +461,13 @@ methods:
             The name of the task
     response:
       id: 101
-      doc: |
-        True if the task is cancelled
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the task is cancelled
   - name: isCancelledFromAddress
     doc: >
       Checks whether a task as identified from the given handler is already
@@ -510,15 +499,13 @@ methods:
             The address of the member where the task will get scheduled.
     response:
       id: 101
-      doc: |
-        True if the task is cancelled
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the task is cancelled
   - name: isDoneFromPartition
     doc: |
       Checks whether a task is done.
@@ -544,15 +531,13 @@ methods:
             The name of the task
     response:
       id: 101
-      doc: |
-        True if the task is done
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the task is done
   - name: isDoneFromAddress
     doc: |
       Checks whether a task is done.
@@ -584,15 +569,13 @@ methods:
             The address of the member where the task will get scheduled.
     response:
       id: 101
-      doc: |
-        True if the task is done
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if the task is done
   - name: getResultFromPartition
     doc: |
       Fetches the result of the task ({@link java.util.concurrent.Callable})
@@ -618,15 +601,13 @@ methods:
             The name of the task
     response:
       id: 105
-      doc: |
-        The result of the completed task, in serialized form ({
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The result of the completed task, in serialized form ({
   - name: getResultFromAddress
     doc: |
       Fetches the result of the task ({@link java.util.concurrent.Callable})
@@ -658,15 +639,13 @@ methods:
             The address of the member where the task will get scheduled.
     response:
       id: 105
-      doc: |
-        The result of the completed task, in serialized form ({
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The result of the completed task, in serialized form ({
   - name: disposeFromPartition
     doc: |
       Dispose the task from the scheduler

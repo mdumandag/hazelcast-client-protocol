@@ -40,15 +40,13 @@ methods:
             Item added to transactional set
     response:
       id: 101
-      doc: |
-        True if item is added successfully
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if item is added successfully
   - name: remove
     doc: |
       Remove item from transactional set.
@@ -87,15 +85,13 @@ methods:
             Item removed from Transactional Set
     response:
       id: 101
-      doc: |
-        True if item is remove successfully
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if item is remove successfully
   - name: size
     doc: |
       Returns the size of the set.
@@ -128,12 +124,10 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 102
-      doc: |
-        The size of the set
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The size of the set

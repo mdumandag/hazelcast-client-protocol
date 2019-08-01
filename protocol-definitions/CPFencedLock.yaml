@@ -50,16 +50,14 @@ methods:
             UID of this invocation
     response:
       id: 103
-      doc: |
-        a valid fencing token (positive number) if the lock
-        is acquired, otherwise -1.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            a valid fencing token (positive number) if the lock
+            is acquired, otherwise -1.
   - name: tryLock
     doc: |
       Attempts to acquire the given FencedLock on the given CP group.
@@ -115,16 +113,14 @@ methods:
             Duration to wait for lock acquire
     response:
       id: 103
-      doc: |
-        a valid fencing token (positive number) if the lock
-        is acquired, otherwise -1.
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            a valid fencing token (positive number) if the lock
+            is acquired, otherwise -1.
   - name: unlock
     doc: |
       Unlocks the given FencedLock on the given CP group. If the lock is
@@ -171,16 +167,14 @@ methods:
             UID of this invocation
     response:
       id: 101
-      doc: |
-        true if the lock is still held by the caller after
-        a successful unlock() call, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the lock is still held by the caller after
+            a successful unlock() call, false otherwise.
   - name: getLockOwnership
     doc: |
       Returns current lock ownership status of the given FencedLock instance.

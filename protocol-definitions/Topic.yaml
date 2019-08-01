@@ -55,15 +55,13 @@ methods:
             if true listens only local events on registered member
     response:
       id: 104
-      doc: |
-        returns the registration id
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            returns the registration id
     events:
       - id: 205
         name: Topic
@@ -111,12 +109,10 @@ methods:
             Id of listener registration.
     response:
       id: 101
-      doc: |
-        True if registration is removed, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            True if registration is removed, false otherwise

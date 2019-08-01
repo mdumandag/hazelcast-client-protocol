@@ -71,16 +71,14 @@ methods:
             ID of the session
     response:
       id: 101
-      doc: |
-        true if the session is found & closed,
-        false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the session is found & closed,
+            false otherwise.
   - name: heartbeatSession
     doc: |
       Commits a heartbeat for the given session on the given cP group and
@@ -127,12 +125,10 @@ methods:
             ID of the CP group
     response:
       id: 103
-      doc: |
-        A unique ID for the caller thread
       params:
         - name: response
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique ID for the caller thread

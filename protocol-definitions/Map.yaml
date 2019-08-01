@@ -54,15 +54,13 @@ methods:
             deleted. O means infinite.
     response:
       id: 105
-      doc: |
-        old value of the entry
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            old value of the entry
   - name: get
     doc: >
       This method returns a clone of the original value, so modifying the
@@ -98,15 +96,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 105
-      doc: |
-        The value for the key if exists
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            The value for the key if exists
   - name: remove
     doc: >
       Removes the mapping for a key from this map if it is present (optional
@@ -148,16 +144,14 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 105
-      doc: >
-        Clone of the removed value, not the original (identically equal) value
-        previously put into the map.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            Clone of the removed value, not the original (identically equal)
+            value previously put into the map.
   - name: replace
     doc: |
       Replaces the entry for a key only if currently mapped to a given value.
@@ -196,16 +190,14 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 105
-      doc: >
-        Clone of the previous value, not the original (identically equal) value
-        previously put into the map.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            Clone of the previous value, not the original (identically equal)
+            value previously put into the map.
   - name: replaceIfSame
     doc: >
       Replaces the the entry for a key only if existing values equal to the
@@ -253,15 +245,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 101
-      doc: |
-        true if value is replaced with new one, false otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if value is replaced with new one, false otherwise
   - name: containsKey
     doc: |
       Returns true if this map contains a mapping for the specified key.
@@ -294,15 +284,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 101
-      doc: |
-        Returns true if the key exists, otherwise returns false.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if the key exists, otherwise returns false.
   - name: containsValue
     doc: >
       Returns true if this map maps one or more keys to the specified value.This
@@ -330,15 +318,13 @@ methods:
             Value to check if exists in the map.
     response:
       id: 101
-      doc: |
-        Returns true if the value exists, otherwise returns false.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if the value exists, otherwise returns false.
   - name: removeIfSame
     doc: >
       Removes the mapping for a key from this map if existing value equal to the
@@ -380,15 +366,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 101
-      doc: |
-        Returns true if the key exists and removed, otherwise returns false.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if the key exists and removed, otherwise returns false.
   - name: delete
     doc: >
       Removes the mapping for a key from this map if it is present.Unlike
@@ -501,15 +485,13 @@ methods:
             key.
     response:
       id: 101
-      doc: |
-        Returns true if successful, otherwise returns false
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if successful, otherwise returns false
   - name: tryPut
     doc: >
       Tries to put the given key and value into this map within a specified
@@ -560,15 +542,13 @@ methods:
             key.
     response:
       id: 101
-      doc: |
-        Returns true if successful, otherwise returns false
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if successful, otherwise returns false
   - name: putTransient
     doc: >
       Same as put except that MapStore, if defined, will not be called to
@@ -667,16 +647,14 @@ methods:
             deleted. O means infinite.
     response:
       id: 105
-      doc: >
-        returns a clone of the previous value, not the original (identically
-        equal) value previously put into the map.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            returns a clone of the previous value, not the original (identically
+            equal) value previously put into the map.
   - name: set
     doc: >
       Puts an entry into this map with a given ttl (time to live) value.Entry
@@ -844,15 +822,13 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 101
-      doc: |
-        Returns true if successful, otherwise returns false
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if successful, otherwise returns false
   - name: isLocked
     doc: >
       Checks the lock for the specified key.If the lock is acquired then returns
@@ -878,15 +854,13 @@ methods:
             Key for the map entry to check if it is locked.
     response:
       id: 101
-      doc: |
-        Returns true if the entry is locked, otherwise returns false
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if the entry is locked, otherwise returns false
   - name: unlock
     doc: >
       Releases the lock for the specified key. It never blocks and returns
@@ -962,15 +936,13 @@ methods:
             interceptor to add
     response:
       id: 104
-      doc: |
-        id of registered interceptor.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            id of registered interceptor.
   - name: removeInterceptor
     doc: >
       Removes the given interceptor for this map so it will not intercept
@@ -996,15 +968,13 @@ methods:
             of interceptor
     response:
       id: 101
-      doc: |
-        Returns true if successful, otherwise returns false
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Returns true if successful, otherwise returns false
   - name: addEntryListenerToKeyWithPredicate
     doc: >
       Adds a MapListener for this map. To receive an event, you should implement
@@ -1058,15 +1028,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        A unique string which is used as a key to remove the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique string which is used as a key to remove the listener.
     events:
       - id: 203
         name: Entry
@@ -1160,15 +1128,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        A unique string which is used as a key to remove the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique string which is used as a key to remove the listener.
     events:
       - id: 203
         name: Entry
@@ -1261,15 +1227,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        A unique string which is used as a key to remove the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique string which is used as a key to remove the listener.
     events:
       - id: 203
         name: Entry
@@ -1356,15 +1320,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        A unique string which is used as a key to remove the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique string which is used as a key to remove the listener.
     events:
       - id: 203
         name: Entry
@@ -1443,15 +1405,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        A unique string which is used as a key to remove the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique string which is used as a key to remove the listener.
     events:
       - id: 215
         name: IMapInvalidation
@@ -1532,15 +1492,13 @@ methods:
             id of registered listener.
     response:
       id: 101
-      doc: |
-        true if registration is removed, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if registration is removed, false otherwise.
   - name: addPartitionLostListener
     doc: >
       Adds a MapPartitionLostListener. The addPartitionLostListener returns a
@@ -1577,15 +1535,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        returns the registration id for the MapPartitionLostListener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            returns the registration id for the MapPartitionLostListener.
     events:
       - id: 209
         name: MapPartitionLost
@@ -1627,15 +1583,13 @@ methods:
             id of register
     response:
       id: 101
-      doc: |
-        true if registration is removed, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if registration is removed, false otherwise.
   - name: getEntryView
     doc: >
       Returns the EntryView for the specified key.
@@ -1722,15 +1676,13 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 101
-      doc: |
-        true if the key is evicted, false otherwise.
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if the key is evicted, false otherwise.
   - name: evictAll
     doc: >
       Evicts all keys from this map except the locked ones. If a MapStore is
@@ -1841,15 +1793,13 @@ methods:
             name of the map
     response:
       id: 106
-      doc: |
-        a set clone of the keys contained in this map.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            a set clone of the keys contained in this map.
   - name: getAll
     doc: >
       Returns the entries for the given keys. If any keys are not present in the
@@ -1883,15 +1833,13 @@ methods:
             keys to get
     response:
       id: 117
-      doc: |
-        values for the provided keys.
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            values for the provided keys.
   - name: values
     doc: >
       Returns a collection clone of the values contained in this map.
@@ -1916,15 +1864,13 @@ methods:
             name of map
     response:
       id: 106
-      doc: |
-        All values in the map
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            All values in the map
   - name: entrySet
     doc: >
       Returns a Set clone of the mappings contained in this map.
@@ -1949,15 +1895,13 @@ methods:
             name of map
     response:
       id: 117
-      doc: |
-        a set clone of the keys mappings in this map
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            a set clone of the keys mappings in this map
   - name: keySetWithPredicate
     doc: >
       Queries the map based on the specified predicate and returns the keys of
@@ -1989,15 +1933,13 @@ methods:
             specified query criteria.
     response:
       id: 106
-      doc: |
-        result key set for the query.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            result key set for the query.
   - name: valuesWithPredicate
     doc: >
       Queries the map based on the specified predicate and returns the values of
@@ -2029,15 +1971,13 @@ methods:
             specified query criteria.
     response:
       id: 106
-      doc: |
-        result value collection of the query.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            result value collection of the query.
   - name: entriesWithPredicate
     doc: >
       Queries the map based on the specified predicate and returns the matching
@@ -2069,15 +2009,13 @@ methods:
             specified query criteria.
     response:
       id: 117
-      doc: |
-        result key-value entry collection of the query.
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            result key-value entry collection of the query.
   - name: addIndex
     doc: >
       Adds an index to this map for the specified entries so that queries can
@@ -2146,15 +2084,13 @@ methods:
             of map
     response:
       id: 102
-      doc: |
-        the number of key-value mappings in this map
       params:
         - name: response
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            the number of key-value mappings in this map
   - name: isEmpty
     doc: |
       Returns true if this map contains no key-value mappings.
@@ -2173,15 +2109,13 @@ methods:
             name of map
     response:
       id: 101
-      doc: |
-        true if this map contains no key-value mappings
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            true if this map contains no key-value mappings
   - name: putAll
     doc: >
       Copies all of the mappings from the specified map to this map (optional
@@ -2285,15 +2219,13 @@ methods:
             TODO DOC
     response:
       id: 105
-      doc: |
-        result of entry process.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            result of entry process.
   - name: submitToKey
     doc: >
       Applies the user defined EntryProcessor to the entry mapped by the key.
@@ -2335,15 +2267,13 @@ methods:
             TODO DOC
     response:
       id: 105
-      doc: |
-        result of entry process.
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            result of entry process.
   - name: executeOnAllKeys
     doc: >
       Applies the user defined EntryProcessor to the all entries in the
@@ -2369,15 +2299,13 @@ methods:
             entry processor to be executed.
     response:
       id: 117
-      doc: |
-        results of entry process on the entries
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            results of entry process on the entries
   - name: executeWithPredicate
     doc: >
       Applies the user defined EntryProcessor to the entries in the map which
@@ -2411,15 +2339,13 @@ methods:
             specified query criteria.
     response:
       id: 117
-      doc: |
-        results of entry process on the entries matching the query criteria
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            results of entry process on the entries matching the query criteria
   - name: executeOnKeys
     doc: >
       Applies the user defined EntryProcessor to the entries mapped by the
@@ -2454,15 +2380,13 @@ methods:
             executed on.
     response:
       id: 117
-      doc: |
-        results of entry process on the entries with the provided keys
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            results of entry process on the entries with the provided keys
   - name: forceUnlock
     doc: >
       Releases the lock for the specified key regardless of the lock owner.It
@@ -2523,15 +2447,13 @@ methods:
             specified query criteria.
     response:
       id: 106
-      doc: |
-        result keys for the query.
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            result keys for the query.
   - name: valuesWithPagingPredicate
     doc: >
       Queries the map based on the specified predicate and returns the values of
@@ -2563,15 +2485,13 @@ methods:
             specified query criteria.
     response:
       id: 117
-      doc: |
-        values for the query.
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            values for the query.
   - name: entriesWithPagingPredicate
     doc: |
       TODO DOC
@@ -2596,15 +2516,13 @@ methods:
             specified query criteria.
     response:
       id: 117
-      doc: |
-        key-value pairs for the query.
       params:
         - name: response
           type: Map_Data_Data
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            key-value pairs for the query.
   - name: clearNearCache
     doc: |
       TODO DOC
@@ -2747,15 +2665,13 @@ methods:
             aggregator to aggregate the entries with
     response:
       id: 105
-      doc: |
-        the aggregation result
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the aggregation result
   - name: aggregateWithPredicate
     doc: >
       Applies the aggregation logic on map entries filtered with the Predicate
@@ -2787,15 +2703,13 @@ methods:
             predicate to filter the entries with
     response:
       id: 105
-      doc: |
-        the aggregation result
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            the aggregation result
   - name: project
     doc: |
       Applies the projection logic on all map entries and returns the result
@@ -2820,15 +2734,14 @@ methods:
             projection to transform the entries with. May return null.
     response:
       id: 119
-      doc: >
-        the resulted collection upon transformation to the type of the projection
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            the resulted collection upon transformation to the type of the
+            projection
   - name: projectWithPredicate
     doc: >
       Applies the projection logic on map entries filtered with the Predicate
@@ -2860,15 +2773,14 @@ methods:
             predicate to filter the entries with
     response:
       id: 119
-      doc: >
-        the resulted collection upon transformation to the type of the projection
       params:
         - name: response
           type: List_Data
           nullable: false
           since: 2
-          doc: |
-            TODO DOC
+          doc: >
+            the resulted collection upon transformation to the type of the
+            projection
   - name: fetchNearCacheInvalidationMetadata
     doc: |
       Fetches invalidation metadata from partitions of map.
@@ -2919,15 +2831,13 @@ methods:
       since: 2
     response:
       id: 123
-      doc: |
-        partitionId to assigned uuid entry list
       params:
         - name: partitionUuidList
           type: Map_Integer_UUID
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            partitionId to assigned uuid entry list
   - name: removeAll
     doc: |
       Removes all entries which match with the supplied predicate
@@ -2990,15 +2900,13 @@ methods:
             fires all events
     response:
       id: 104
-      doc: |
-        A unique string which is used as a key to remove the listener.
       params:
         - name: response
           type: String
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            A unique string which is used as a key to remove the listener.
     events:
       - id: 215
         name: IMapInvalidation
@@ -3293,15 +3201,13 @@ methods:
             deleted. O means infinite.
     response:
       id: 101
-      doc: |
-        'true' if the entry is affected, 'false' otherwise
       params:
         - name: response
           type: boolean
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            'true' if the entry is affected, 'false' otherwise
   - name: putWithMaxIdle
     doc: >
       Puts an entry into this map with a given ttl (time to live) value.Entry
@@ -3362,15 +3268,13 @@ methods:
             Milliseconds of idle, after which this entry shall be deleted. O means infinite.
     response:
       id: 105
-      doc: |
-        old value of the entry
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            old value of the entry
   - name: putTransientWithMaxIdle
     doc: >
       Same as put except that MapStore, if defined, will not be called to
@@ -3427,15 +3331,13 @@ methods:
             Milliseconds of idle, after which this entry shall be deleted. O means infinite.
     response:
       id: 105
-      doc: |
-        old value of the entry
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            old value of the entry
   - name: putIfAbsentWithMaxIdle
     doc: >
       Puts an entry into this map with a given ttl (time to live) value if the
@@ -3492,15 +3394,13 @@ methods:
             Milliseconds of idle, after which this entry shall be deleted. O means infinite.
     response:
       id: 105
-      doc: |
-        old value of the entry
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            old value of the entry
   - name: setWithMaxIdle
     doc: >
       Puts an entry into this map with a given ttl (time to live) value and
@@ -3562,12 +3462,10 @@ methods:
             Milliseconds of idle, after which this entry shall be deleted. O means infinite.
     response:
       id: 105
-      doc: |
-        old value of the entry
       params:
         - name: response
           type: Data
           nullable: true
           since: 2
           doc: |
-            TODO DOC
+            old value of the entry
