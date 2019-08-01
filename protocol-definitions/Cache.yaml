@@ -174,8 +174,6 @@ methods:
             Name of the cache.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: removeAllKeys
     doc: >
       Removes entries for the specified keys. The order in which the individual
@@ -214,8 +212,6 @@ methods:
             the request in the cluster.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: removeAll
     doc: >
       Removes all of the mappings from this cache. The order that the individual
@@ -250,8 +246,6 @@ methods:
             the request in the cluster.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: containsKey
     doc: >
       Determines if the Cache contains an entry for the specified key. More
@@ -342,8 +336,6 @@ methods:
             Name of the cache.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: entryProcessor
     doc: |
       TODO DOC
@@ -723,8 +715,6 @@ methods:
             registered for.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: loadAll
     doc: |
       TODO DOC
@@ -756,8 +746,6 @@ methods:
             be replaced by those loaded from a CacheLoader
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: managementConfig
     doc: |
       TODO DOC
@@ -794,8 +782,6 @@ methods:
             the address of the host to enable.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: putIfAbsent
     doc: >
       Associates the specified key with the given value if and only if there is
@@ -1250,8 +1236,6 @@ methods:
             the request in the cluster.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: iterateEntries
     doc: >
       Fetches specified number of entries from the specified partition starting

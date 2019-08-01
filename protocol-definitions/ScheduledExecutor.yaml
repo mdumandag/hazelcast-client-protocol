@@ -30,8 +30,6 @@ methods:
             sent.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: submitToPartition
     doc: >
       Submits the task to partition for execution, partition is chosen based on
@@ -81,8 +79,6 @@ methods:
             period between each run in milliseconds
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: submitToAddress
     doc: >
       Submits the task to a member for execution, member is provided in the form
@@ -138,8 +134,6 @@ methods:
             period between each run in milliseconds
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getAllScheduledFutures
     doc: |
       Returns all scheduled tasks in for a given scheduler in the given member.
@@ -670,8 +664,6 @@ methods:
             The name of the task
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: disposeFromAddress
     doc: |
       Dispose the task from the scheduler
@@ -702,5 +694,3 @@ methods:
             The address of the member where the task will get scheduled.
     response:
       id: 100
-      doc: |
-        TODO DOC

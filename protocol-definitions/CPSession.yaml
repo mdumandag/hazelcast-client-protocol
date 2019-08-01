@@ -104,8 +104,6 @@ methods:
             ID of the session
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: generateThreadId
     doc: |
       Generates a new ID for the caller thread. The ID is unique in the given

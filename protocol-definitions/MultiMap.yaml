@@ -376,8 +376,6 @@ methods:
             Name of the MultiMap
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: valueCount
     doc: |
       Returns the number of values that match the given key in the multimap.
@@ -682,8 +680,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: tryLock
     doc: >
       Tries to acquire the lock for the specified key for the specified lease
@@ -824,8 +820,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: forceUnlock
     doc: >
       Releases the lock for the specified key regardless of the lock owner. It
@@ -860,8 +854,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: removeEntry
     doc: >
       Removes all the entries with the given key. The collection is NOT backed
@@ -943,5 +935,3 @@ methods:
             entry) can perform the requested operation
     response:
       id: 100
-      doc: |
-        TODO DOC

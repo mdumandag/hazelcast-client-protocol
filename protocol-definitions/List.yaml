@@ -291,8 +291,6 @@ methods:
             Name of the List
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getAll
     doc: |
       Return the all elements of this collection
@@ -584,8 +582,6 @@ methods:
             Value to be inserted.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: removeWithIndex
     doc: >
       Removes the element at the specified position in this list (optional

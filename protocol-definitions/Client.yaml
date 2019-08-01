@@ -451,8 +451,6 @@ methods:
             TODO DOC
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: destroyProxy
     doc: |
       TODO DOC
@@ -497,8 +495,6 @@ methods:
             "hz:impl:xaService"
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getPartitions
     doc: |
       TODO DOC
@@ -536,8 +532,6 @@ methods:
       since: 2
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addPartitionLostListener
     doc: |
       TODO DOC
@@ -715,8 +709,6 @@ methods:
       since: 2
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: statistics
     doc: >
       The statistics is a String that is composed of key=value pairs separated
@@ -983,8 +975,6 @@ methods:
             The key=value pairs separated by the ',' character
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: deployClasses
     doc: |
       Deploys the list of classes to cluster
@@ -1005,8 +995,6 @@ methods:
             list of class definitions
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addPartitionListener
     doc: |
       TODO DOC
@@ -1018,8 +1006,6 @@ methods:
       since: 2
     response:
       id: 100
-      doc: |
-        TODO DOC
     events:
       - id: 217
         name: Partitions
@@ -1065,8 +1051,6 @@ methods:
             For possible service names see createProxy message.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: isFailoverSupported
     doc: |
       TODO DOC

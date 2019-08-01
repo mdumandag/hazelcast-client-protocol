@@ -279,8 +279,6 @@ methods:
             entries to be stored in this map
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: clear
     doc: >
       The clear operation wipes data out of the replicated maps.It is the only
@@ -306,8 +304,6 @@ methods:
             Name of the Replicated Map
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addEntryListenerToKeyWithPredicate
     doc: >
       Adds an continuous entry listener for this map. The listener will be

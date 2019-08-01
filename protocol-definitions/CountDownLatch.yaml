@@ -76,8 +76,6 @@ methods:
             Name of the CountDownLatch
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getCount
     doc: |
       Returns the current count.

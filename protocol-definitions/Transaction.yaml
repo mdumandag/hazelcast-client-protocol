@@ -26,8 +26,6 @@ methods:
             The thread id for the transaction.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: create
     doc: |
       TODO DOC
@@ -107,5 +105,3 @@ methods:
             The thread id for the transaction.
     response:
       id: 100
-      doc: |
-        TODO DOC

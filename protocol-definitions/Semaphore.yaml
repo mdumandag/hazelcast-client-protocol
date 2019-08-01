@@ -70,8 +70,6 @@ methods:
             The given permit count
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: availablePermits
     doc: >
       Returns the current number of permits currently available in this
@@ -152,8 +150,6 @@ methods:
             The number of permits to remove
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: release
     doc: >
       Releases the given number of permits, increasing the number of available
@@ -183,8 +179,6 @@ methods:
             The number of permits to remove
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: tryAcquire
     doc: >
       Acquires the given number of permits, if they are available, and returns
@@ -256,5 +250,3 @@ methods:
             @throws IllegalArgumentException if {@code increase} is negative
     response:
       id: 100
-      doc: |
-        TODO DOC

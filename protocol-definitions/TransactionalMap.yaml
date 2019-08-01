@@ -334,8 +334,6 @@ methods:
             The value to associate with key
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: putIfAbsent
     doc: >
       If the specified key is not already associated with a value, associate it
@@ -600,8 +598,6 @@ methods:
             Remove the mapping for this key.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: removeIfSame
     doc: >
       Removes the entry for a key only if currently mapped to a given value. The

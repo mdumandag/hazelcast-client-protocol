@@ -21,8 +21,6 @@ methods:
             javax.transaction.xa.Xid.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: collectTransactions
     doc: |
       TODO DOC
@@ -67,8 +65,6 @@ methods:
             back.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: commit
     doc: |
       TODO DOC
@@ -93,8 +89,6 @@ methods:
             If true, the prepare is also done.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: create
     doc: |
       TODO DOC
@@ -146,8 +140,6 @@ methods:
             The id of the transaction to prepare.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: rollback
     doc: |
       TODO DOC
@@ -166,5 +158,3 @@ methods:
             The id of the transaction to rollback.
     response:
       id: 100
-      doc: |
-        TODO DOC

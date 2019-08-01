@@ -142,8 +142,6 @@ methods:
             The round this invocation will be performed on
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getCount
     doc: |
       Returns the current count.

@@ -416,8 +416,6 @@ methods:
             entry) can perform the requested operation.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: flush
     doc: >
       If this map has a MapStore, this method flushes all the local dirty
@@ -439,8 +437,6 @@ methods:
             Name of the map.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: tryRemove
     doc: >
       Tries to remove the entry with the given key from this map within the
@@ -597,8 +593,6 @@ methods:
             deleted. O means infinite.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: putIfAbsent
     doc: >
       Puts an entry into this map with a given ttl (time to live) value if the
@@ -705,8 +699,6 @@ methods:
             deleted. O means infinite.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: lock
     doc: >
       Acquires the lock for the specified lease time.After lease time, lock will
@@ -762,8 +754,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: tryLock
     doc: >
       Tries to acquire the lock for the specified key for the specified lease
@@ -907,8 +897,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addInterceptor
     doc: >
       Adds an interceptor for this map. Added interceptor will intercept
@@ -1706,8 +1694,6 @@ methods:
             name of map
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: loadAll
     doc: >
       Loads all keys into the store. This is a batch load operation so that an
@@ -1734,8 +1720,6 @@ methods:
             be replaced by those loaded from the MapLoader
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: loadGivenKeys
     doc: >
       Loads the given keys. This is a batch load operation so that an
@@ -1768,8 +1752,6 @@ methods:
             by those loaded from the MapLoader
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: keySet
     doc: >
       Returns a set clone of the keys contained in this map. The set is NOT
@@ -2061,8 +2043,6 @@ methods:
             true if index should be ordered, false otherwise.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: size
     doc: >
       Returns the number of key-value mappings in this map.  If the map contains
@@ -2153,8 +2133,6 @@ methods:
             mappings to be stored in this map
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: clear
     doc: >
       This method clears the map and invokes MapStore#deleteAll deleteAll on
@@ -2178,8 +2156,6 @@ methods:
             of map
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: executeOnKey
     doc: >
       Applies the user defined EntryProcessor to the entry mapped by the key.
@@ -2421,8 +2397,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: keySetWithPagingPredicate
     doc: |
       TODO DOC
@@ -2547,8 +2521,6 @@ methods:
             TODO DOC
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: fetchKeys
     doc: >
       Fetches specified number of keys from the specified partition starting
@@ -2862,8 +2834,6 @@ methods:
             used to select entries to be removed from map.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addNearCacheInvalidationListener
     doc: >
       Adds listener to map. This listener will be used to listen near cache

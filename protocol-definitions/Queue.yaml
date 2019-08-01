@@ -69,8 +69,6 @@ methods:
             The element to add
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: size
     doc: >
       Returns the number of elements in this collection.  If this collection
@@ -478,8 +476,6 @@ methods:
             Name of the Queue
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addAll
     doc: >
       Adds all of the elements in the specified collection to this collection

@@ -155,8 +155,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: unlock
     doc: |
       Releases the lock.
@@ -190,8 +188,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: forceUnlock
     doc: >
       Releases the lock regardless of the lock owner. It always successfully
@@ -220,8 +216,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: tryLock
     doc: >
       Tries to acquire the lock for the specified lease time.After lease time,

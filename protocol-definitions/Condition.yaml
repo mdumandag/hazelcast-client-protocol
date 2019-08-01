@@ -126,8 +126,6 @@ methods:
             request idempotent by sending the same reference id during retries.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: signal
     doc: >
       If any threads are waiting on this condition then one is selected for
@@ -169,8 +167,6 @@ methods:
             Name of the lock to wait on.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: signalAll
     doc: >
       If any threads are waiting on this condition then they are all woken up.
@@ -206,5 +202,3 @@ methods:
             Name of the lock to wait on.
     response:
       id: 100
-      doc: |
-        TODO DOC

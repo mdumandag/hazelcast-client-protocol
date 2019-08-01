@@ -58,5 +58,3 @@ methods:
             The name of this distributed object
     response:
       id: 100
-      doc: |
-        TODO DOC

@@ -23,8 +23,6 @@ methods:
             Name of the executor.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: isShutdown
     doc: |
       Returns true if this executor has been shut down.
@@ -136,8 +134,6 @@ methods:
             Sequence of the execution.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: retrieveAndDisposeResult
     doc: |
       Retrieves and disposes the result of the execution with the given sequence

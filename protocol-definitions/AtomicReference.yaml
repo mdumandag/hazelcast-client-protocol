@@ -57,8 +57,6 @@ methods:
             the function that alters the currently stored reference
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: alterAndGet
     doc: >
       Alters the currently stored reference by applying a function on it and
@@ -242,8 +240,6 @@ methods:
             the new value
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: clear
     doc: |
       Clears the current stored reference.
@@ -262,8 +258,6 @@ methods:
             Name of the AtomicReference distributed object instance.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getAndSet
     doc: |
       Gets the old value and sets the new value.

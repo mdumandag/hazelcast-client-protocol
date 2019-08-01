@@ -23,8 +23,6 @@ methods:
             Name of the executor.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: isShutdown
     doc: |
       Returns true if this executor has been shut down.

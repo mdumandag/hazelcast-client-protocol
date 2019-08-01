@@ -57,8 +57,6 @@ methods:
             The function applied to the currently stored value.
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: alterAndGet
     doc: >
       Alters the currently stored value by applying a function on it and gets
@@ -379,5 +377,3 @@ methods:
             The new value
     response:
       id: 100
-      doc: |
-        TODO DOC

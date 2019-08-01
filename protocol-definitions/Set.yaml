@@ -311,8 +311,6 @@ methods:
             Name of the Set
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: getAll
     doc: |
       Return the all elements of this collection

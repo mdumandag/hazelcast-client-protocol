@@ -26,8 +26,6 @@ methods:
             The message to publish to all subscribers of this topic
     response:
       id: 100
-      doc: |
-        TODO DOC
   - name: addMessageListener
     doc: >
       Subscribes to this topic. When someone publishes a message on this topic.
