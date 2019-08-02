@@ -183,7 +183,7 @@ methods:
             True if successfully set as publishable, false otherwise.
   - name: addListener
     doc: |
-      TODO DOC
+      Adds the listener to listen underlying IMap events.
     request:
       id: 6148
       retryable: false
@@ -202,7 +202,7 @@ methods:
           nullable: false
           since: 2
           doc: >
-            if true fires events that originated from this node only, otherwise
+            If true fires events that originated from this node only, otherwise
             fires all events
     response:
       id: 104
@@ -222,7 +222,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Event data contract which is sent to subscriber side.
       - id: 213
         name: QueryCacheBatch
         params:
@@ -231,7 +231,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Batch of event data contracts which is sent to subscriber side.
           - name: source
             type: String
             nullable: false

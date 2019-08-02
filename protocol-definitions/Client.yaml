@@ -359,7 +359,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
       - id: 201
         name: MemberList
         params:
@@ -672,7 +672,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
   - name: removeDistributedObjectListener
     doc: |
       TODO DOC

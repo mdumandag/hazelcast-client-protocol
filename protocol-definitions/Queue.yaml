@@ -563,19 +563,19 @@ methods:
             nullable: true
             since: 2
             doc: |
-              TODO DOC
+              Item related to the event
           - name: uuid
             type: String
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              UUID of the member that fired the event
           - name: eventType
             type: int
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
   - name: removeListener
     doc: >
       Removes the specified item listener.Returns silently if the specified

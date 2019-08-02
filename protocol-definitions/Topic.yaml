@@ -69,19 +69,19 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Message related to the event
           - name: publishTime
             type: long
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Time when the message is published
           - name: uuid
             type: String
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              UUID of the member that fired the event
   - name: removeMessageListener
     doc: >
       Stops receiving messages for the given message listener.If the given

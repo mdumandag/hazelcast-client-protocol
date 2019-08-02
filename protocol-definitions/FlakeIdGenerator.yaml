@@ -4,7 +4,7 @@ ns: Hazelcast.Client.Protocol.Codec
 methods:
   - name: newIdBatch
     doc: |
-      TODO DOC
+      Returns set of IDs for the generator.
     request:
       id: 7937
       retryable: true
@@ -17,33 +17,31 @@ methods:
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Name of the FlakeIdGenerator
         - name: batchSize
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Number of IDs in the batch
     response:
       id: 126
-      doc: |
-        TODO DOC
       params:
         - name: base
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            First ID in the batch
         - name: increment
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Increment count for the next ID in the batch
         - name: batchSize
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            Number of IDs in the batch

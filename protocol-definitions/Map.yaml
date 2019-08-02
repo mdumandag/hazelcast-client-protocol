@@ -1056,7 +1056,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
           - name: uuid
             type: String
             nullable: false
@@ -1156,7 +1156,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
           - name: uuid
             type: String
             nullable: false
@@ -1255,7 +1255,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
           - name: uuid
             type: String
             nullable: false
@@ -1348,7 +1348,7 @@ methods:
             nullable: false
             since: 2
             doc: |
-              TODO DOC
+              Type of the event
           - name: uuid
             type: String
             nullable: false

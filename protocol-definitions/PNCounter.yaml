@@ -39,27 +39,25 @@ methods:
             the target replica
     response:
       id: 127
-      doc: |
-        the current value of the counter
       params:
         - name: value
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The current value of the counter
         - name: replicaTimestamps
           type: Map_String_Long
           nullable: false
           since: 2
           doc: |
-            last observed replica timestamps (vector clock)
+            Last observed replica timestamps (vector clock)
         - name: replicaCount
           type: int
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of replicas in the cluster
   - name: add
     doc: |
       Adds a delta to the PNCounter value. The delta may be negative for a
@@ -112,15 +110,14 @@ methods:
             the target replica
     response:
       id: 127
-      doc: |
-        the value before the update if {
       params:
         - name: value
           type: long
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The value before the update if {@code getBeforeUpdate} is
+            {@code true}, otherwise the value after the update
         - name: replicaTimestamps
           type: Map_String_Long
           nullable: false
@@ -132,7 +129,7 @@ methods:
           nullable: false
           since: 2
           doc: |
-            TODO DOC
+            The number of replicas in the cluster
   - name: getConfiguredReplicaCount
     doc: |
       Returns the configured number of CRDT replicas for the PN counter with
