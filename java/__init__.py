@@ -72,11 +72,11 @@ _java_types_encode = {
     "Map_String_String": "java.util.Collection<java.util.Map.Entry<java.lang.String, java.lang.String>>",
     "Map_String_byteArray": "java.util.Collection<java.util.Map.Entry<java.lang.String, byte[]>>",
     "Map_Integer_UUID": "java.util.Collection<java.util.Map.Entry<java.lang.Integer, java.util.UUID>>",
-    "Map_String_Long": "java.util.Collection<java.util.Map.Entry<java.lang.String, java.lang.Long>>",
     "Map_String_Map_Integer_Long": "java.util.Collection<java.util.Map.Entry<java.lang.String, java.util.List<java.util.Map.Entry<java.lang.Integer, java.lang.Long>>>>",
     "Map_Address_List_Integer": "java.util.Collection<java.util.Map.Entry<com.hazelcast.nio.Address, java.util.List<java.lang.Integer>>>",
     "Map_Data_Data": "java.util.Collection<java.util.Map.Entry<com.hazelcast.nio.serialization.Data, com.hazelcast.nio.serialization.Data>>",
-    "Map_Member_List_ScheduledTaskHandler": "java.util.Collection<java.util.Map.Entry<com.hazelcast.cluster.Member, java.util.List<com.hazelcast.scheduledexecutor.ScheduledTaskHandler>>>"
+    "Map_Member_List_ScheduledTaskHandler": "java.util.Collection<java.util.Map.Entry<com.hazelcast.cluster.Member, java.util.List<com.hazelcast.scheduledexecutor.ScheduledTaskHandler>>>",
+    "Map_UUID_Long": "java.util.Collection<java.util.Map.Entry<java.util.UUID, java.lang.Long>>"
 }
 
 _java_types_decode = {
@@ -99,9 +99,9 @@ _java_types_decode = {
     "Map_String_String": "java.util.List<java.util.Map.Entry<java.lang.String, java.lang.String>>",
     "Map_String_byteArray": "java.util.List<java.util.Map.Entry<java.lang.String, byte[]>>",
     "Map_Integer_UUID": "java.util.List<java.util.Map.Entry<java.lang.Integer, java.util.UUID>>",
-    "Map_String_Long": "java.util.List<java.util.Map.Entry<java.lang.String, java.lang.Long>>",
     "Map_String_Map_Integer_Long": "java.util.List<java.util.Map.Entry<java.lang.String, java.util.List<java.util.Map.Entry<java.lang.Integer, java.lang.Long>>>>",
     "Map_Address_List_Integer": "java.util.List<java.util.Map.Entry<com.hazelcast.nio.Address, java.util.List<java.lang.Integer>>>",
     "Map_Data_Data": "java.util.List<java.util.Map.Entry<com.hazelcast.nio.serialization.Data, com.hazelcast.nio.serialization.Data>>",
-    "Map_Member_List_ScheduledTaskHandler": "java.util.List<java.util.Map.Entry<com.hazelcast.cluster.Member, java.util.List<com.hazelcast.scheduledexecutor.ScheduledTaskHandler>>>"
+    "Map_Member_List_ScheduledTaskHandler": "java.util.List<java.util.Map.Entry<com.hazelcast.cluster.Member, java.util.List<com.hazelcast.scheduledexecutor.ScheduledTaskHandler>>>",
+    "Map_UUID_Long": "java.util.List<java.util.Map.Entry<java.util.UUID, java.lang.Long>>"
 }

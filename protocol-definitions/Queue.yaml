@@ -503,7 +503,7 @@ methods:
             doc: |
               TODO DOC
           - name: uuid
-            type: String
+            type: UUID
             nullable: false
             since: 2.0
             doc: |

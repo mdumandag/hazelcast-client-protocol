@@ -19,7 +19,7 @@ FixedLengthTypes = [
 
 FixedMapTypes = [
     'Map_Integer_UUID',
-    'Map_String_Long',
+    'Map_UUID_Long',
     'Map_Integer_Long'
 ]
 
