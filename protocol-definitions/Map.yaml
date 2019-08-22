@@ -219,7 +219,7 @@ methods:
           since: 2.0
           doc: |
             true if value is replaced with new one, false otherwise
-  - id: 9
+  - id: 6
     name: containsKey
     since: 2.0
     doc: |
@@ -255,7 +255,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if the key exists, otherwise returns false.
-  - id: 10
+  - id: 7
     name: containsValue
     since: 2.0
     doc: |
@@ -286,7 +286,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if the value exists, otherwise returns false.
-  - id: 11
+  - id: 8
     name: removeIfSame
     since: 2.0
     doc: |
@@ -328,7 +328,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if the key exists and removed, otherwise returns false.
-  - id: 12
+  - id: 9
     name: delete
     since: 2.0
     doc: |
@@ -362,7 +362,7 @@ methods:
           doc: |
             The id of the user thread performing the operation. It is used to guarantee that only the lock holder thread (if a lock exists on the entry) can perform the requested operation.
     response: {}
-  - id: 13
+  - id: 10
     name: flush
     since: 2.0
     doc: |
@@ -380,7 +380,7 @@ methods:
           doc: |
             Name of the map.
     response: {}
-  - id: 14
+  - id: 11
     name: tryRemove
     since: 2.0
     doc: |
@@ -424,7 +424,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if successful, otherwise returns false
-  - id: 15
+  - id: 12
     name: tryPut
     since: 2.0
     doc: |
@@ -474,7 +474,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if successful, otherwise returns false
-  - id: 16
+  - id: 13
     name: putTransient
     since: 2.0
     doc: |
@@ -516,7 +516,7 @@ methods:
           doc: |
             The duration in milliseconds after which this entry shall be deleted. O means infinite.
     response: {}
-  - id: 17
+  - id: 14
     name: putIfAbsent
     since: 2.0
     doc: |
@@ -565,7 +565,7 @@ methods:
           since: 2.0
           doc: |
             returns a clone of the previous value, not the original (identically equal) value previously put into the map.
-  - id: 18
+  - id: 15
     name: set
     since: 2.0
     doc: |
@@ -608,7 +608,7 @@ methods:
           doc: |
             The duration in milliseconds after which this entry shall be deleted. O means infinite.
     response: {}
-  - id: 19
+  - id: 16
     name: lock
     since: 2.0
     doc: |
@@ -653,7 +653,7 @@ methods:
           doc: |
             The client-wide unique id for this request. It is used to make the request idempotent by sending the same reference id during retries.
     response: {}
-  - id: 20
+  - id: 17
     name: tryLock
     since: 2.0
     doc: |
@@ -710,7 +710,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if successful, otherwise returns false
-  - id: 21
+  - id: 18
     name: isLocked
     since: 2.0
     doc: |
@@ -740,7 +740,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if the entry is locked, otherwise returns false
-  - id: 22
+  - id: 19
     name: unlock
     since: 2.0
     doc: |
@@ -778,7 +778,7 @@ methods:
           doc: |
             The client-wide unique id for this request. It is used to make the request idempotent by sending the same reference id during retries.
     response: {}
-  - id: 23
+  - id: 20
     name: addInterceptor
     since: 2.0
     doc: |
@@ -809,7 +809,7 @@ methods:
           since: 2.0
           doc: |
             id of registered interceptor.
-  - id: 24
+  - id: 21
     name: removeInterceptor
     since: 2.0
     doc: |
@@ -839,7 +839,7 @@ methods:
           since: 2.0
           doc: |
             Returns true if successful, otherwise returns false
-  - id: 25
+  - id: 22
     name: addEntryListenerToKeyWithPredicate
     since: 2.0
     doc: |
@@ -940,7 +940,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 26
+  - id: 23
     name: addEntryListenerWithPredicate
     since: 2.0
     doc: |
@@ -1035,7 +1035,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 27
+  - id: 24
     name: addEntryListenerToKey
     since: 2.0
     doc: |
@@ -1129,7 +1129,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 28
+  - id: 25
     name: addEntryListener
     since: 2.0
     doc: |
@@ -1217,7 +1217,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 29
+  - id: 26
     name: addNearCacheEntryListener
     since: 2.0
     doc: |
@@ -1306,37 +1306,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 30
-    name: removeEntryListener
-    since: 2.0
-    doc: |
-      Removes the specified entry listener. Returns silently if there is no such listener added before.
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            name of map
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            id of registered listener.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            true if registration is removed, false otherwise.
-  - id: 31
+  - id: 27
     name: addPartitionLostListener
     since: 2.0
     doc: |
@@ -1386,37 +1356,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 32
-    name: removePartitionLostListener
-    since: 2.0
-    doc: |
-      Removes the specified map partition lost listener. Returns silently if there is no such listener added before.
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            name of map
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            id of register
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            true if registration is removed, false otherwise.
-  - id: 33
+  - id: 28
     name: getEntryView
     since: 2.0
     doc: |
@@ -1460,7 +1400,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 34
+  - id: 29
     name: evict
     since: 2.0
     doc: |
@@ -1497,7 +1437,7 @@ methods:
           since: 2.0
           doc: |
             true if the key is evicted, false otherwise.
-  - id: 35
+  - id: 30
     name: evictAll
     since: 2.0
     doc: |
@@ -1516,7 +1456,7 @@ methods:
           doc: |
             name of map
     response: {}
-  - id: 36
+  - id: 31
     name: loadAll
     since: 2.0
     doc: |
@@ -1540,7 +1480,7 @@ methods:
             when <code>true</code>, existing values in the Map will
             be replaced by those loaded from the MapLoader
     response: {}
-  - id: 37
+  - id: 32
     name: loadGivenKeys
     since: 2.0
     doc: |
@@ -1569,7 +1509,7 @@ methods:
           doc: |
             when <code>true</code>, existing values in the Map will be replaced by those loaded from the MapLoader
     response: {}
-  - id: 38
+  - id: 33
     name: keySet
     since: 2.0
     doc: |
@@ -1595,7 +1535,7 @@ methods:
           since: 2.0
           doc: |
             a set clone of the keys contained in this map.
-  - id: 39
+  - id: 34
     name: getAll
     since: 2.0
     doc: |
@@ -1629,7 +1569,7 @@ methods:
           since: 2.0
           doc: |
             values for the provided keys.
-  - id: 40
+  - id: 35
     name: values
     since: 2.0
     doc: |
@@ -1656,7 +1596,7 @@ methods:
           since: 2.0
           doc: |
             All values in the map
-  - id: 41
+  - id: 36
     name: entrySet
     since: 2.0
     doc: |
@@ -1683,7 +1623,7 @@ methods:
           since: 2.0
           doc: |
             a set clone of the keys mappings in this map
-  - id: 42
+  - id: 37
     name: keySetWithPredicate
     since: 2.0
     doc: |
@@ -1716,7 +1656,7 @@ methods:
           since: 2.0
           doc: |
             result key set for the query.
-  - id: 43
+  - id: 38
     name: valuesWithPredicate
     since: 2.0
     doc: |
@@ -1749,7 +1689,7 @@ methods:
           since: 2.0
           doc: |
             result value collection of the query.
-  - id: 44
+  - id: 39
     name: entriesWithPredicate
     since: 2.0
     doc: |
@@ -1782,7 +1722,7 @@ methods:
           since: 2.0
           doc: |
             result key-value entry collection of the query.
-  - id: 45
+  - id: 40
     name: addIndex
     since: 2.0
     doc: |
@@ -1818,7 +1758,7 @@ methods:
           doc: |
             true if index should be ordered, false otherwise.
     response: {}
-  - id: 46
+  - id: 41
     name: size
     since: 2.0
     doc: |
@@ -1843,7 +1783,7 @@ methods:
           since: 2.0
           doc: |
             the number of key-value mappings in this map
-  - id: 47
+  - id: 42
     name: isEmpty
     since: 2.0
     doc: |
@@ -1867,7 +1807,7 @@ methods:
           since: 2.0
           doc: |
             true if this map contains no key-value mappings
-  - id: 48
+  - id: 43
     name: putAll
     since: 2.0
     doc: |
@@ -1896,7 +1836,7 @@ methods:
           doc: |
             mappings to be stored in this map
     response: {}
-  - id: 49
+  - id: 44
     name: clear
     since: 2.0
     doc: |
@@ -1915,7 +1855,7 @@ methods:
           doc: |
             of map
     response: {}
-  - id: 50
+  - id: 45
     name: executeOnKey
     since: 2.0
     doc: |
@@ -1958,7 +1898,7 @@ methods:
           since: 2.0
           doc: |
             result of entry process.
-  - id: 51
+  - id: 46
     name: submitToKey
     since: 2.0
     doc: |
@@ -2002,7 +1942,7 @@ methods:
           since: 2.0
           doc: |
             result of entry process.
-  - id: 52
+  - id: 47
     name: executeOnAllKeys
     since: 2.0
     doc: |
@@ -2032,7 +1972,7 @@ methods:
           since: 2.0
           doc: |
             results of entry process on the entries
-  - id: 53
+  - id: 48
     name: executeWithPredicate
     since: 2.0
     doc: |
@@ -2069,7 +2009,7 @@ methods:
           since: 2.0
           doc: |
             results of entry process on the entries matching the query criteria
-  - id: 54
+  - id: 49
     name: executeOnKeys
     since: 2.0
     doc: |
@@ -2106,7 +2046,7 @@ methods:
           since: 2.0
           doc: |
             results of entry process on the entries with the provided keys
-  - id: 55
+  - id: 50
     name: forceUnlock
     since: 2.0
     doc: |
@@ -2136,7 +2076,7 @@ methods:
           doc: |
             The client-wide unique id for this request. It is used to make the request idempotent by sending the same reference id during retries.
     response: {}
-  - id: 56
+  - id: 51
     name: keySetWithPagingPredicate
     since: 2.0
     doc: |
@@ -2166,7 +2106,7 @@ methods:
           since: 2.0
           doc: |
             result keys for the query.
-  - id: 57
+  - id: 52
     name: valuesWithPagingPredicate
     since: 2.0
     doc: |
@@ -2199,7 +2139,7 @@ methods:
           since: 2.0
           doc: |
             values for the query.
-  - id: 58
+  - id: 53
     name: entriesWithPagingPredicate
     since: 2.0
     doc: |
@@ -2229,7 +2169,7 @@ methods:
           since: 2.0
           doc: |
             key-value pairs for the query.
-  - id: 59
+  - id: 54
     name: clearNearCache
     since: 2.0
     doc: |
@@ -2252,7 +2192,7 @@ methods:
           doc: |
             TODO DOC
     response: {}
-  - id: 60
+  - id: 55
     name: fetchKeys
     since: 2.0
     doc: |
@@ -2294,7 +2234,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 61
+  - id: 56
     name: fetchEntries
     since: 2.0
     doc: |
@@ -2336,7 +2276,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 62
+  - id: 57
     name: aggregate
     since: 2.0
     doc: |
@@ -2366,7 +2306,7 @@ methods:
           since: 2.0
           doc: |
             the aggregation result
-  - id: 63
+  - id: 58
     name: aggregateWithPredicate
     since: 2.0
     doc: |
@@ -2402,7 +2342,7 @@ methods:
           since: 2.0
           doc: |
             the aggregation result
-  - id: 64
+  - id: 59
     name: project
     since: 2.0
     doc: |
@@ -2432,7 +2372,7 @@ methods:
           since: 2.0
           doc: |
             the resulted collection upon transformation to the type of the projection
-  - id: 65
+  - id: 60
     name: projectWithPredicate
     since: 2.0
     doc: |
@@ -2468,7 +2408,7 @@ methods:
           since: 2.0
           doc: |
             the resulted collection upon transformation to the type of the projection
-  - id: 66
+  - id: 61
     name: fetchNearCacheInvalidationMetadata
     since: 2.0
     doc: |
@@ -2504,7 +2444,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 67
+  - id: 62
     name: assignAndGetUuids
     since: 2.0
     doc: |
@@ -2521,7 +2461,7 @@ methods:
           since: 2.0
           doc: |
             partitionId to assigned uuid entry list
-  - id: 68
+  - id: 63
     name: removeAll
     since: 2.0
     doc: |
@@ -2544,7 +2484,7 @@ methods:
           doc: |
             used to select entries to be removed from map.
     response: {}
-  - id: 69
+  - id: 64
     name: addNearCacheInvalidationListener
     since: 2.0
     doc: |
@@ -2635,7 +2575,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 70
+  - id: 65
     name: fetchWithQuery
     since: 2.0
     doc: |
@@ -2690,7 +2630,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 71
+  - id: 66
     name: eventJournalSubscribe
     since: 2.0
     doc: |
@@ -2722,7 +2662,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 72
+  - id: 67
     name: eventJournalRead
     since: 2.0
     doc: |
@@ -2801,7 +2741,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 73
+  - id: 68
     name: setTtl
     since: 2.0
     doc: |
@@ -2849,7 +2789,7 @@ methods:
           since: 2.0
           doc: |
             'true' if the entry is affected, 'false' otherwise
-  - id: 74
+  - id: 69
     name: putWithMaxIdle
     since: 2.0
     doc: |
@@ -2907,7 +2847,7 @@ methods:
           since: 2.0
           doc: |
             old value of the entry
-  - id: 75
+  - id: 70
     name: putTransientWithMaxIdle
     since: 2.0
     doc: |
@@ -2963,7 +2903,7 @@ methods:
           since: 2.0
           doc: |
             old value of the entry
-  - id: 76
+  - id: 71
     name: putIfAbsentWithMaxIdle
     since: 2.0
     doc: |
@@ -3019,7 +2959,7 @@ methods:
           since: 2.0
           doc: |
             old value of the entry
-  - id: 77
+  - id: 72
     name: setWithMaxIdle
     since: 2.0
     doc: |

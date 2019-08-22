@@ -345,36 +345,6 @@ methods:
             doc: |
               TODO DOC
   - id: 12
-    name: removeListener
-    since: 2.0
-    doc: |
-      Removes the specified item listener. Returns silently if the specified listener was not added before.
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: name
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the List
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            The id of the listener which was provided during registration.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            True if unregistered, false otherwise.
-  - id: 13
     name: isEmpty
     since: 2.0
     doc: |
@@ -398,7 +368,7 @@ methods:
           since: 2.0
           doc: |
             True if this list contains no elements
-  - id: 14
+  - id: 13
     name: addAllWithIndex
     since: 2.0
     doc: |
@@ -438,7 +408,7 @@ methods:
           since: 2.0
           doc: |
             True if this list changed as a result of the call, false otherwise.
-  - id: 15
+  - id: 14
     name: get
     since: 2.0
     doc: |
@@ -468,7 +438,7 @@ methods:
           since: 2.0
           doc: |
             The element at the specified position in this list
-  - id: 16
+  - id: 15
     name: set
     since: 2.0
     doc: |
@@ -504,7 +474,7 @@ methods:
           since: 2.0
           doc: |
             The element previously at the specified position
-  - id: 17
+  - id: 16
     name: addWithIndex
     since: 2.0
     doc: |
@@ -534,7 +504,7 @@ methods:
           doc: |
             Value to be inserted.
     response: {}
-  - id: 18
+  - id: 17
     name: removeWithIndex
     since: 2.0
     doc: |
@@ -565,7 +535,7 @@ methods:
           since: 2.0
           doc: |
             The element previously at the specified position
-  - id: 19
+  - id: 18
     name: lastIndexOf
     since: 2.0
     doc: |
@@ -597,7 +567,7 @@ methods:
           doc: |
             the index of the last occurrence of the specified element in
             this list, or -1 if this list does not contain the element
-  - id: 20
+  - id: 19
     name: indexOf
     since: 2.0
     doc: |
@@ -629,7 +599,7 @@ methods:
           doc: |
             The index of the first occurrence of the specified element in
             this list, or -1 if this list does not contain the element
-  - id: 21
+  - id: 20
     name: sub
     since: 2.0
     doc: |
@@ -675,7 +645,7 @@ methods:
           since: 2.0
           doc: |
             A view of the specified range within this list
-  - id: 22
+  - id: 21
     name: iterator
     since: 2.0
     doc: |
@@ -699,7 +669,7 @@ methods:
           since: 2.0
           doc: |
             An iterator over the elements in this list in proper sequence
-  - id: 23
+  - id: 22
     name: listIterator
     since: 2.0
     doc: |

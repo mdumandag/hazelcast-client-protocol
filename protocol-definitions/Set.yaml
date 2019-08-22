@@ -354,36 +354,6 @@ methods:
             doc: |
               TODO DOC
   - id: 12
-    name: removeListener
-    since: 2.0
-    doc: |
-      Removes the specified item listener. Returns silently if the specified listener was not added before.
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the Set
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            The id retrieved during registration.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            true if the listener with the provided id existed and removed, false otherwise.
-  - id: 13
     name: isEmpty
     since: 2.0
     doc: |

@@ -903,3 +903,39 @@ methods:
           since: 2.0
           doc: |
             Returns true if server supports cluster failover
+  - id: 20
+    name: removeListener
+    since: 2.0
+    doc: |
+      Removes the specified listener. Returns silently if there is no such listener added before
+    request:
+      retryable: true
+      acquiresResource: false
+      partitionIdentifier: -1
+      params:
+        - name: serviceName
+          type: String
+          nullable: false
+          since: 2.0
+          doc: |
+            Service name.
+        - name: name
+          type: String
+          nullable: false
+          since: 2.0
+          doc: |
+            Name of the data structure.
+        - name: registrationId
+          type: String
+          nullable: false
+          since: 2.0
+          doc: |
+            Registration ID of the listener.
+    response:
+      params:
+        - name: response
+          type: boolean
+          nullable: false
+          since: 2.0
+          doc: |
+            True if registration is removed, false otherwise.

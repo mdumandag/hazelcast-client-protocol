@@ -809,66 +809,6 @@ methods:
           doc: |
             The value previously assigned to the given key, or null if not assigned.
   - id: 21
-    name: removeEntryListener
-    since: 2.0
-    doc: |
-      TODO DOC
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the cache.
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            The id assigned during the registration for the listener which shall be removed.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            true if the listener is de-registered, false otherwise
-  - id: 22
-    name: removeInvalidationListener
-    since: 2.0
-    doc: |
-      TODO DOC
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the cache.
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            The id assigned during the registration for the listener which shall be removed.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            true if the listener is de-registered, false otherwise
-  - id: 23
     name: remove
     since: 2.0
     doc: |
@@ -911,7 +851,7 @@ methods:
           since: 2.0
           doc: |
             returns false if there was no matching key
-  - id: 24
+  - id: 22
     name: replace
     since: 2.0
     doc: |
@@ -970,7 +910,7 @@ methods:
           since: 2.0
           doc: |
             The replaced value.
-  - id: 25
+  - id: 23
     name: size
     since: 2.0
     doc: |
@@ -994,7 +934,7 @@ methods:
           since: 2.0
           doc: |
             total entry count
-  - id: 26
+  - id: 24
     name: addPartitionLostListener
     since: 2.0
     doc: |
@@ -1043,37 +983,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 27
-    name: removePartitionLostListener
-    since: 2.0
-    doc: |
-      Removes the specified cache partition lost listener. Returns silently if there is no such listener added before
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the Cache
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            ID of registered listener.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            true if registration is removed, false otherwise.
-  - id: 28
+  - id: 25
     name: putAll
     since: 2.0
     doc: |
@@ -1110,7 +1020,7 @@ methods:
             user generated id which shall be received as a field of the cache event upon completion of
             the request in the cluster.
     response: {}
-  - id: 29
+  - id: 26
     name: iterateEntries
     since: 2.0
     doc: |
@@ -1152,7 +1062,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 30
+  - id: 27
     name: addNearCacheInvalidationListener
     since: 2.0
     doc: |
@@ -1249,7 +1159,7 @@ methods:
             since: 2.0
             doc: |
               TODO DOC
-  - id: 31
+  - id: 28
     name: fetchNearCacheInvalidationMetadata
     since: 2.0
     doc: |
@@ -1285,7 +1195,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 32
+  - id: 29
     name: assignAndGetUuids
     since: 2.0
     doc: |
@@ -1302,7 +1212,7 @@ methods:
           since: 2.0
           doc: |
             partitionId to assigned uuid entry list
-  - id: 33
+  - id: 30
     name: eventJournalSubscribe
     since: 2.0
     doc: |
@@ -1334,7 +1244,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 34
+  - id: 31
     name: eventJournalRead
     since: 2.0
     doc: |
@@ -1413,7 +1323,7 @@ methods:
           since: 2.0
           doc: |
             TODO DOC
-  - id: 35
+  - id: 32
     name: setExpiryPolicy
     since: 2.0
     doc: |

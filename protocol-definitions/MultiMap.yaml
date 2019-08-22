@@ -546,36 +546,6 @@ methods:
             doc: |
               TODO DOC
   - id: 15
-    name: removeEntryListener
-    since: 2.0
-    doc: |
-      Removes the specified entry listener. Returns silently if no such listener was added before.
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the MultiMap
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Registration id of listener
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            True if registration is removed, false otherwise
-  - id: 16
     name: lock
     since: 2.0
     doc: |
@@ -620,7 +590,7 @@ methods:
           doc: |
             The client-wide unique id for this request. It is used to make the request idempotent by sending the same reference id during retries.
     response: {}
-  - id: 17
+  - id: 16
     name: tryLock
     since: 2.0
     doc: |
@@ -677,7 +647,7 @@ methods:
           since: 2.0
           doc: |
             True if the lock was acquired and false if the waiting time elapsed before the lock acquired
-  - id: 18
+  - id: 17
     name: isLocked
     since: 2.0
     doc: |
@@ -707,7 +677,7 @@ methods:
           since: 2.0
           doc: |
             True if the lock acquired,false otherwise
-  - id: 19
+  - id: 18
     name: unlock
     since: 2.0
     doc: |
@@ -743,7 +713,7 @@ methods:
           doc: |
             The client-wide unique id for this request. It is used to make the request idempotent by sending the same reference id during retries.
     response: {}
-  - id: 20
+  - id: 19
     name: forceUnlock
     since: 2.0
     doc: |
@@ -773,7 +743,7 @@ methods:
           doc: |
             The client-wide unique id for this request. It is used to make the request idempotent by sending the same reference id during retries.
     response: {}
-  - id: 21
+  - id: 20
     name: removeEntry
     since: 2.0
     doc: |
@@ -816,7 +786,7 @@ methods:
           since: 2.0
           doc: |
             True if the size of the multimap changed after the remove operation, false otherwise.
-  - id: 22
+  - id: 21
     name: delete
     since: 2.0
     doc: |

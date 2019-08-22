@@ -595,36 +595,6 @@ methods:
             doc: |
               TODO DOC
   - id: 14
-    name: removeEntryListener
-    since: 2.0
-    doc: |
-      Removes the specified entry listener. Returns silently if there was no such listener added before.
-    request:
-      retryable: true
-      acquiresResource: false
-      partitionIdentifier: -1
-      params:
-        - name: name
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            Name of the ReplicatedMap
-        - name: registrationId
-          type: String
-          nullable: false
-          since: 2.0
-          doc: |
-            ID of the registered entry listener.
-    response:
-      params:
-        - name: response
-          type: boolean
-          nullable: false
-          since: 2.0
-          doc: |
-            True if registration is removed, false otherwise.
-  - id: 15
     name: keySet
     since: 2.0
     doc: |
@@ -653,7 +623,7 @@ methods:
           since: 2.0
           doc: |
             A lazy set view of the keys contained in this map.
-  - id: 16
+  - id: 15
     name: values
     since: 2.0
     doc: |
@@ -677,7 +647,7 @@ methods:
           since: 2.0
           doc: |
             A collection view of the values contained in this map.
-  - id: 17
+  - id: 16
     name: entrySet
     since: 2.0
     doc: |
@@ -701,7 +671,7 @@ methods:
           since: 2.0
           doc: |
             A lazy set view of the mappings contained in this map.
-  - id: 18
+  - id: 17
     name: addNearCacheEntryListener
     since: 2.0
     doc: |
