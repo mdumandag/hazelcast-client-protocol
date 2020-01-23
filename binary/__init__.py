@@ -20,6 +20,7 @@ FixedEntryListTypes = [
     'EntryList_Integer_Integer',
     'EntryList_Long_byteArray',
     'EntryList_UUID_List_Integer',
+    'EntryList_UUID_UUID',
 ]
 
 FixedMapTypes = [

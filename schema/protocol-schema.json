@@ -31,6 +31,7 @@
             "EntryList_Integer_UUID",
             "EntryList_Integer_Long",
             "EntryList_Integer_Integer",
+            "EntryList_UUID_UUID",
             "List_Integer",
             "List_Long",
             "List_UUID",
