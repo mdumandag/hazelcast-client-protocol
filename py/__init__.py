@@ -27,11 +27,15 @@ py_ignore_service_list = [7, 9, 10, 11, 12, 19, 20, 22, 24, 25, 26, 27, 30, 31, 
 
 
 class ImportPathHolder:
-    def __init__(self, name, path):
+    def __init__(self, name, path, import_as=None):
         self.name = name
         self.path = path
+        self.import_as = import_as
 
     def get_import_statement(self):
+        if self.import_as:
+            return "from hazelcast.%s import %s as %s" % (self.path, self.name, self.import_as)
+
         return "from hazelcast.%s import %s" % (self.path, self.name)
 
 
@@ -69,9 +73,9 @@ class PathHolders:
     EntryListUUIDListIntegerCodec = ImportPathHolder("EntryListUUIDListIntegerCodec", "protocol.builtin")
     MapCodec = ImportPathHolder("MapCodec", "protocol.builtin")
     CodecUtil = ImportPathHolder("CodecUtil", "protocol.builtin")
-    IndexConfig = ImportPathHolder("IndexConfig", "config")
+    IndexConfig = ImportPathHolder("_IndexConfig", "config", import_as="IndexConfig")
     IndexConfigCodec = ImportPathHolder("IndexConfigCodec", "protocol.codec.custom.index_config_codec")
-    BitmapIndexOptions = ImportPathHolder("BitmapIndexOptions", "config")
+    BitmapIndexOptions = ImportPathHolder("_BitmapIndexOptions", "config", import_as="BitmapIndexOptions")
     BitmapIndexOptionsCodec = ImportPathHolder("BitmapIndexOptionsCodec", "protocol.codec.custom.bitmap_index_options_codec")
     PagingPredicateHolder = ImportPathHolder("PagingPredicateHolder", "protocol")
     PagingPredicateHolderCodec = ImportPathHolder("PagingPredicateHolderCodec", "protocol.codec.custom.paging_predicate_holder_codec")
