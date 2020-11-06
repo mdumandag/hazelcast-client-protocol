@@ -1,30 +1,30 @@
 {% macro encode_var_sized(param) -%}
     {% if is_var_sized_list(param.type) or is_var_sized_list_contains_nullable(param.type) -%}
-        ListMultiFrameCodec.encode{% if is_var_sized_list_contains_nullable(param.type)%}_contains_nullable{% endif %}{% if param.nullable  %}_nullable{% endif %}(buf, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ item_type(lang_name, param.type) }}Codec.encode)
+        ListMultiFrameCodec.encode{% if is_var_sized_list_contains_nullable(param.type)%}_contains_nullable{% endif %}{% if param.nullable  %}_nullable{% endif %}(message, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ item_type(lang_name, param.type) }}Codec.encode)
     {%- elif is_var_sized_entry_list(param.type) -%}
-        EntryListCodec.encode{% if param.nullable  %}_nullable{% endif %}(buf, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ key_type(lang_name, param.type) }}Codec.encode, {{ value_type(lang_name, param.type) }}Codec.encode)
+        EntryListCodec.encode{% if param.nullable  %}_nullable{% endif %}(message, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ key_type(lang_name, param.type) }}Codec.encode, {{ value_type(lang_name, param.type) }}Codec.encode)
     {%- elif is_var_sized_map(param.type) -%}
-        MapCodec.encode{% if param.nullable  %}_nullable{% endif %}(buf, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ key_type(lang_name, param.type) }}Codec.encode, {{ value_type(lang_name, param.type) }}Codec.encode)
+        MapCodec.encode{% if param.nullable  %}_nullable{% endif %}(message, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ key_type(lang_name, param.type) }}Codec.encode, {{ value_type(lang_name, param.type) }}Codec.encode)
     {%- else -%}
         {%- if param.nullable  -%}
-            CodecUtil.encode_nullable(buf, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ lang_name(param.type) }}Codec.encode)
+            CodecUtil.encode_nullable(message, {{ param_name(codec.name) }}.{{ param_name(param.name) }}, {{ lang_name(param.type) }}Codec.encode)
         {%- else -%}
-            {{ lang_name(param.type) }}Codec.encode(buf, {{ param_name(codec.name) }}.{{ param_name(param.name) }})
+            {{ lang_name(param.type) }}Codec.encode(message, {{ param_name(codec.name) }}.{{ param_name(param.name) }})
         {%- endif %}
     {% endif %}
 {%- endmacro %}
 {% macro decode_var_sized(param) -%}
     {%- if is_var_sized_list(param.type) or is_var_sized_list_contains_nullable(param.type) -%}
-        ListMultiFrameCodec.decode{% if is_var_sized_list_contains_nullable(param.type) %}_contains_nullable{% endif %}{% if param.nullable  %}_nullable{% endif %}(msg, {{ item_type(lang_name, param.type) }}Codec.decode)
+        ListMultiFrameCodec.decode{% if is_var_sized_list_contains_nullable(param.type) %}_contains_nullable{% endif %}{% if param.nullable  %}_nullable{% endif %}(message, {{ item_type(lang_name, param.type) }}Codec.decode)
     {%- elif is_var_sized_entry_list(param.type) -%}
-        EntryListCodec.decode{% if param.nullable  %}_nullable{% endif %}(msg, {{ key_type(lang_name, param.type) }}Codec.decode, {{ value_type(lang_name, param.type) }}Codec.decode)
+        EntryListCodec.decode{% if param.nullable  %}_nullable{% endif %}(message, {{ key_type(lang_name, param.type) }}Codec.decode, {{ value_type(lang_name, param.type) }}Codec.decode)
     {%- elif is_var_sized_map(param.type) -%}
-        MapCodec.decode{% if param.nullable  %}_nullable{% endif %}(msg, {{ key_type(lang_name, param.type) }}Codec.decode, {{ value_type(lang_name, param.type) }}Codec.decode)
+        MapCodec.decode{% if param.nullable  %}_nullable{% endif %}(message, {{ key_type(lang_name, param.type) }}Codec.decode, {{ value_type(lang_name, param.type) }}Codec.decode)
     {%- else -%}
         {%- if param.nullable  -%}
-            CodecUtil.decode_nullable(msg, {{ lang_name(param.type) }}Codec.decode)
+            CodecUtil.decode_nullable(message, {{ lang_name(param.type) }}Codec.decode)
         {%- else -%}
-            {{ lang_name(param.type) }}Codec.decode(msg)
+            {{ lang_name(param.type) }}Codec.decode(message)
         {%- endif -%}
     {%- endif -%}
 {%- endmacro %}
@@ -59,78 +59,76 @@ from hazelcast.protocol.builtin import {% if fix_sized_params|length != 0 %}FixS
 {% if fix_sized_params|length != 0 %}
 from hazelcast.serialization.bits import *
 {% endif %}
-from hazelcast.protocol.client_message import END_FRAME_BUF, END_FINAL_FRAME_BUF{% if fix_sized_params|length != 0 %}, SIZE_OF_FRAME_LENGTH_AND_FLAGS, create_initial_buffer_custom{% else %}, BEGIN_FRAME_BUF{% endif %}
+from hazelcast.protocol.client_message import END_FRAME{% if fix_sized_params|length != 0 %}, create_initial_frame_custom{% endif %}{% if should_add_begin_frame %}, BEGIN_FRAME{% endif %}
 
 {{ get_import_statements(fix_sized_params, var_sized_params) }}
 {% for param in fix_sized_params %}
-_{{ to_upper_snake_case(param.name) }}_ENCODE_OFFSET = {% if loop.first %}{% if should_add_begin_frame %}2 * {% endif %}SIZE_OF_FRAME_LENGTH_AND_FLAGS{% else %}_{{ to_upper_snake_case(loop.previtem.name)}}_ENCODE_OFFSET + {{ loop.previtem.type.upper() }}_SIZE_IN_BYTES{% endif %}
 
-_{{ to_upper_snake_case(param.name) }}_DECODE_OFFSET = {% if loop.first %}0{% else %}_{{ to_upper_snake_case(loop.previtem.name)}}_DECODE_OFFSET + {{ loop.previtem.type.upper() }}_SIZE_IN_BYTES{% endif %}
-
+_{{ to_upper_snake_case(param.name) }}_OFFSET = {% if loop.first %}0{% else %}_{{ to_upper_snake_case(loop.previtem.name)}}_OFFSET + {{ loop.previtem.type.upper() }}_SIZE_IN_BYTES{% endif %}
     {% if loop.last %}
-_INITIAL_FRAME_SIZE = _{{ to_upper_snake_case(param.name) }}_ENCODE_OFFSET + {{ param.type.upper() }}_SIZE_IN_BYTES - {% if should_add_begin_frame %}2 * {% endif %}SIZE_OF_FRAME_LENGTH_AND_FLAGS
+
+_INITIAL_FRAME_SIZE = _{{ to_upper_snake_case(param.name) }}_OFFSET + {{ param.type.upper() }}_SIZE_IN_BYTES
 
     {% endif %}
 {% endfor %}
 
 class {{ codec.name }}Codec(object):
     @staticmethod
-    def encode(buf, {{ param_name(codec.name) }}, is_final=False):
-        {% if fix_sized_params|length == 0 %}
-        buf.extend(BEGIN_FRAME_BUF)
-        {% endif %}
-        {% for param in fix_sized_params %}
-        {% if loop.first %}
-        initial_frame_buf = create_initial_buffer_custom(_INITIAL_FRAME_SIZE{% if not should_add_begin_frame %}, True{% endif %})
-        {% endif %}
-        FixSizedTypesCodec.encode_{{ param.type|lower }}(initial_frame_buf, _{{ to_upper_snake_case(param.name) }}_ENCODE_OFFSET, {{ param_name(codec.name) }}.{{ param_name(param.name) }})
-        {% if loop.last %}
-        buf.extend(initial_frame_buf)
-        {% endif %}
-        {% endfor %}
-        {% for param in var_sized_params %}
-            {% if lang_types_encode(param.type) == '!skip' %}
-                {% continue %}
-            {% endif %}
+    def encode(message, {{ param_name(codec.name) }}):
+{% if should_add_begin_frame %}
+        message.add_frame(BEGIN_FRAME.copy())
+{% endif %}
+{% for param in fix_sized_params %}
+    {% if loop.first %}
+        initial_frame = create_initial_frame_custom(_INITIAL_FRAME_SIZE{% if not should_add_begin_frame %}, True{% endif %})
+        buf = initial_frame.buf
+    {% endif %}
+        FixSizedTypesCodec.encode_{{ param.type|lower }}(buf, _{{ to_upper_snake_case(param.name) }}_OFFSET, {{ param_name(codec.name) }}.{{ param_name(param.name) }})
+    {% if loop.last %}
+        message.add_frame(initial_frame)
+    {% endif %}
+{% endfor %}
+{% for param in var_sized_params %}
+    {% if lang_types_encode(param.type) == '!skip' %}
+        {% continue %}
+    {% endif %}
         {{ encode_var_sized(param) }}
-        {% endfor %}
-        if is_final:
-            buf.extend(END_FINAL_FRAME_BUF)
-        else:
-            buf.extend(END_FRAME_BUF)
+{% endfor %}
+        message.add_frame(END_FRAME.copy())
 
     @staticmethod
-    def decode(msg):
+    def decode(message):
         {% if should_add_begin_frame %}
-        msg.next_frame()
+        message.next_frame()
         {% endif %}
         {% for param in fix_sized_params %}
         {% if loop.first %}
-        initial_frame = msg.next_frame()
+        initial_frame = message.next_frame()
+        buf = initial_frame.buf
         {% endif %}
         {% if param in fix_sized_new_params %}
         is_{{ param_name(param.name) }}_exists = False
         {{ param_name(param.name) }} = {% if param.type == 'boolean' %}False{% elif param.type == 'UUID' %}None{% else %}0{% endif %}
 
-        if len(initial_frame.buf) >= _{{ to_upper_snake_case(param.name) }}_DECODE_OFFSET + {{ param.type.upper() }}_SIZE_IN_BYTES:
-            {{ param_name(param.name) }} = FixSizedTypesCodec.decode_{{ param.type|lower }}(initial_frame.buf, _{{ to_upper_snake_case(param.name) }}_DECODE_OFFSET)
+        if len(buf) >= _{{ to_upper_snake_case(param.name) }}_OFFSET + {{ param.type.upper() }}_SIZE_IN_BYTES:
+            {{ param_name(param.name) }} = FixSizedTypesCodec.decode_{{ param.type|lower }}(buf, _{{ to_upper_snake_case(param.name) }}_OFFSET)
             is_{{ param_name(param.name) }}_exists = True
         {% else %}
-        {{ param_name(param.name) }} = FixSizedTypesCodec.decode_{{ param.type|lower }}(initial_frame.buf, _{{ to_upper_snake_case(param.name) }}_DECODE_OFFSET)
+        {{ param_name(param.name) }} = FixSizedTypesCodec.decode_{{ param.type|lower }}(buf, _{{ to_upper_snake_case(param.name) }}_OFFSET)
         {% endif %}
         {% endfor %}
         {% for param in var_sized_params %}
             {% if param in new_codec_params %}
         is_{{ param_name(param.name) }}_exists = False
         {{ param_name(param.name) }} = None
-        if not msg.peek_next_frame().is_end_frame():
+        if not message.peek_next_frame().is_end_frame():
             {{ param_name(param.name) }} = {{ decode_var_sized(param) }}
             is_{{ param_name(param.name) }}_exists = True
             {% else %}
         {{ param_name(param.name) }} = {{ decode_var_sized(param) }}
             {% endif %}
         {% endfor %}
-        CodecUtil.fast_forward_to_end_frame(msg)
+        CodecUtil.fast_forward_to_end_frame(message)
         {% set ctor_params = [] %}
         {% for param in codec.params %}
             {% do ctor_params.append(param) %}
